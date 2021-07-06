@@ -1,0 +1,89 @@
+.nav-item{
+    font-size: 1.1em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    line-height: 26px;
+    padding-left:19px;
+    margin-bottom: 0.5em;
+  }
+
+
+.top-navbar{
+    background-color: #F8F9FA;
+}
+
+.top-navbar .nav-link{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+  }
+
+a{
+  color: #233353 !important;
+}
+
+img {
+margin: 3%;
+}
+
+.btn-contact{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  border: none;
+  border-radius: 0 0 20px 20px;
+  background-color: #233353;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn-alert:hover{
+    animation-name: shakeAnim;
+}
+
+.btn-alert{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  background-color: #EE5C5A;
+  border:none;
+  border-radius: 0 0 20px 20px;
+  animation-name: shake;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+.btn-alert{
+  background-color: #233353;
+}
+
+.btn-estimate{
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #EE5C5A;
+  border: none;
+  border-radius: 0 0 20px 20px;
+}
+
+
+
+
+.icon-table_view:before {
+  content: "\e90a";
+  color:white;
+}
+
+.icon-notifications_on:before {
+  content: "\e909";
+  color: white;
+}
+
+ul {
+  padding-right: 10%;
+}
+
+a:hover{
+  font-weight: 800 !important;
+}
+
+.active{
+  font-weight: 500;
+}
