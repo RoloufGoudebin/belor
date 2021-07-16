@@ -17,6 +17,8 @@ import { MDBBootstrapModulesPro} from 'ng-uikit-pro-standard';
 import { IntroComponent } from './home/intro/intro.component';
 import { ServicesComponent } from './home/services/services.component';
 import { ControlsComponent } from './home/controls/controls.component';
+import { WhyComponent } from './home/why/why.component';
+import { ConsultCoordinationComponent } from './home/consult-coordination/consult-coordination.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { ControlsComponent } from './home/controls/controls.component';
     IntroComponent,
     ServicesComponent,
     ControlsComponent,
+    WhyComponent,
+    ConsultCoordinationComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
