@@ -2,6 +2,11 @@
     background-color: #fff !important;
     transition: background-color 200ms linear;
 }
+ @media (max-width: 768px) {
+    .fixed-top{
+        background-color: #fff !important;
+    }
+}
 
 .nav-link{
     color: white !important;
@@ -28,7 +33,6 @@
 
 .nav-link.scrolled{
     color: #5d4267 !important;
-    opacity: 100% !important;
 }
 
 .active{
