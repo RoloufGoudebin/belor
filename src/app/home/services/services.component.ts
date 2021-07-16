@@ -31,7 +31,10 @@ export class ServicesComponent implements OnInit {
   ];
   constructor() { }
 
-  ngOnInit(): void {
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
   }
 
+  ngOnInit(): void {
+  }
 }
