@@ -4,7 +4,7 @@
 
     <div class="row col-8 mx-auto text-white">
 
-        <div *ngFor="let feature of controlsFeatures | slice:0:3 " class="col-md-3 mx-auto">
+        <div *ngFor="let feature of controlsFeatures | slice:0:3 " class="col-md-3 mx-auto view">
             <mdb-icon fas icon="{{feature.icon}}" size="3x" class="red-text"></mdb-icon>
             <h5 class="font-weight-bold mt-3">{{feature.title}}</h5>
             <p class="text-justify">{{feature.body}}</p>

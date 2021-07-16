@@ -19,6 +19,7 @@ import { ServicesComponent } from './home/services/services.component';
 import { ControlsComponent } from './home/controls/controls.component';
 import { WhyComponent } from './home/why/why.component';
 import { ConsultCoordinationComponent } from './home/consult-coordination/consult-coordination.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ConsultCoordinationComponent } from './home/consult-coordination/consul
     ControlsComponent,
     WhyComponent,
     ConsultCoordinationComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

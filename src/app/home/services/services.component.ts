@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
 
+  mouseOvered;
+
   //cards of services
   cardsServices = [
     { 

@@ -16,9 +16,9 @@
         </div>
     </div>
     <div class="row col-8 mx-auto mt-5">
-        
+
         <!--Card-->
-        <mdb-card *ngFor="let card of cardsServices" class="col-3 mx-auto round">
+        <mdb-card *ngFor="let card of cardsServices" class="col-3 mx-auto">
             <!--Card image-->
             <div class="view overlay waves-light" mdbWavesEffect>
                 <mdb-card-img src="{{card.img}}"></mdb-card-img>
@@ -29,7 +29,7 @@
             <!--/.Card image-->
 
             <!--Button-->
-            <a mdbBtn floating="true" gradient="purple" class="btn-action ml-auto mr-4 waves-light" mdbWavesEffect>
+            <a mdbBtn floating="true" gradient="purple" class="btn-action ml-auto mr-4 rotateHover" mdbWavesEffect>
                 <mdb-icon fas icon="chevron-right" class="pl-1 waves-light" mdbWavesEffect></mdb-icon>
             </a>
 
