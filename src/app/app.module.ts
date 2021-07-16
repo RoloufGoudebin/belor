@@ -16,6 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MDBBootstrapModulesPro} from 'ng-uikit-pro-standard';
 import { IntroComponent } from './home/intro/intro.component';
 import { ServicesComponent } from './home/services/services.component';
+import { ControlsComponent } from './home/controls/controls.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ServicesComponent } from './home/services/services.component';
     ContactComponent,
     IntroComponent,
     ServicesComponent,
+    ControlsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
