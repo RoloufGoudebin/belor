@@ -17,40 +17,19 @@
 </nav>-->
 
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar white-text">
-    <div class="container-fluid">
-        <a class="navbar-brand " routerLinkActive="active" routerLink="/"><img class="logo"
-                src='assets/img/logo.gif'></a>
-        <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar white-text my-0 py-0">
+    <a class="navbar-brand my-0 py-0" routerLinkActive="active" routerLink="/"><img class="logo"
+            src='assets/img/logo.gif'></a>
+    <button class="navbar-toggler my-0 py-0" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class='navbar navbar-collapse mr-5' [ngbCollapse]="isNavbarCollapsed" id="navbarCollapse">
-            <ul class="navbar-nav ml-md-auto">
-                <li class="nav-item my-auto">
-                    <a class="nav-link py-0 active" routerLinkActive="active" routerLink="/">
-                        <mdb-icon fas icon="home"></mdb-icon>
-                    </a>
-                </li>
-                <li class="nav-item my-auto">
-                    <a class="nav-link py-0" routerLinkActive="active" routerLink="/tarifs">Tarifs</a>
-                </li>
-                <li class="nav-item my-auto">
-                    <a class="nav-link py-0" routerLinkActive="active" routerLink="/activites">Nos activités</a>
-                </li>
-                <li class="nav-item my-auto">
-                    <a class="nav-link py-0" routerLinkActive="active" routerLink="/formations">Formations</a>
-                </li>
-                <li class="nav-item my-auto">
-                    <a class="nav-link py-0" routerLinkActive="active" routerLink="/liens">Liens</a>
-                </li>
-                <li class="nav-item my-auto">
-                    <a class="nav-link py-0" routerLinkActive="active" routerLink="/blog">Blog</a>
-                </li>
-                <li class="nav-item my-auto">
-                    <a class="nav-link py-0" routerLinkActive="active" routerLink="/contact">Contact</a>
-                </li>
-            </ul>
-        </div>
+    <div class='navbar navbar-collapse mr-5 my-0 py-0' [ngbCollapse]="isNavbarCollapsed" id="navbarCollapse">
+        <ul class="navbar-nav ml-md-auto my-0 py-0">
+            <li *ngFor="let navLink of navLinks" class="nav-item" routerLinkActive="active"
+                routerLink="{{navLink.link}}" [routerLinkActiveOptions]="{ exact: true }">
+                <a class=" nav-link py-0">{{navLink.title}}</a>
+            </li>
+        </ul>
     </div>
 </nav>

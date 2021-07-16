@@ -5,22 +5,35 @@
 
 .nav-link{
     color: white !important;
-    font-size: 1.7em;
+    font-size: 1.2em;
 }
 
-.nav-link:hover{
+.nav-item{
+    padding-top: 45px;
+    padding-bottom: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav-item:active{
+    outline: none;
+}
+
+.nav-item:hover{
+    background-color: rgba(102, 102, 102, 0.15);
     color: white !important;
-    font-size: 1.7em;
-    font-weight: 700;
 }
 
 .nav-link.scrolled{
-    color: black !important;
+    color: #5d4267 !important;
+    opacity: 100% !important;
 }
 
 .active{
     font-weight: 700;
-  }
+}
 
 .logo{
     max-height: 85px;
