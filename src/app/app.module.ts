@@ -13,6 +13,10 @@ import { LiensComponent } from './liens/liens.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 
+import { MDBBootstrapModulesPro} from 'ng-uikit-pro-standard';
+import { IntroComponent } from './home/intro/intro.component';
+import { ServicesComponent } from './home/services/services.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,11 +28,14 @@ import { ContactComponent } from './contact/contact.component';
     LiensComponent,
     BlogComponent,
     ContactComponent,
+    IntroComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    MDBBootstrapModulesPro.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],

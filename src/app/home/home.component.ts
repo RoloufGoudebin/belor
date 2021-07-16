@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ButtonsModule, WavesModule, CollapseModule } from 'ng-uikit-pro-standard'
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css','./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
