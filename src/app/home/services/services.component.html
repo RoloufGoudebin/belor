@@ -1,0 +1,53 @@
+<section class="control py-5 grey lighten-4 wow fadeIn" data-wow-offset="50">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center heading display-5 font-weight-bold">Une demande de contrôle chez vous ?</h3>
+        </div>
+        <div class="col-4 mx-auto md-form input-group">
+            <input type="text" class="form-control white" placeholder="Votre adresse e-mail" aria-label="email"
+                aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button mdbBtn gradient="purple" rounded="true" size="md" class="m-0 px-5" type="button"
+                    id="button-addon2" mdbWavesEffect>GO</button>
+            </div>
+
+        </div>
+        <div class="col-12">
+            <h4 class="text-center subsubheading display-7">Organisme de contrôle agréé et accrédité n°355-INSP</h4>
+        </div>
+    </div>
+    <div class="row col-8 mx-auto mt-5">
+        <!--Card-->
+        <mdb-card *ngFor="let card of cardsServices" class="col-3 mx-auto round">
+            <!--Card image-->
+            <div class="view overlay waves-light" mdbWavesEffect>
+                <mdb-card-img src="{{card.img}}"></mdb-card-img>
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!--/.Card image-->
+
+            <!--Button-->
+            <a mdbBtn floating="true" class="btn-action ml-auto mr-4 mdb-color lighten-3 waves-light" mdbWavesEffect>
+                <mdb-icon fas icon="chevron-right" class="pl-1 waves-light" mdbWavesEffect></mdb-icon>
+            </a>
+
+            <!--Card content-->
+            <mdb-card-body>
+
+                <!--Title-->
+                <mdb-card-title>
+                    <h4>{{card.title}}</h4>
+                </mdb-card-title>
+
+                <hr>
+                <!--Text-->
+                <p class="font-small grey-dark-text mb-0">{{card.body}}</p>
+            </mdb-card-body>
+            <!--/.Card content-->
+            <!-- Card footer -->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+</section>
