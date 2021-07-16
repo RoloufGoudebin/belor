@@ -1,0 +1,38 @@
+.fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+}
+
+.nav-link{
+    color: white !important;
+    font-size: 1.7em;
+}
+
+.nav-link:hover{
+    color: white !important;
+    font-size: 1.7em;
+    font-weight: 700;
+}
+
+.nav-link.scrolled{
+    color: black !important;
+}
+
+.active{
+    font-weight: 700;
+  }
+
+.logo{
+    max-height: 85px;
+    margin-left: 2.5em;
+}
+
+.nav-colored { 
+    background-color:#000; 
+}
+
+.nav-transparent {
+    background-color:transparent;
+}
+
+

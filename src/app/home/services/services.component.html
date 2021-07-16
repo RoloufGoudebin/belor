@@ -1,4 +1,4 @@
-<section class="control py-5 grey lighten-4 wow fadeIn" data-wow-offset="100">
+<section class="control py-5 grey lighten-4 wow fadeIn">
     <div class="row mx-0 px-0">
         <div class="col-12">
             <h3 class="text-center heading display-5 font-weight-bold">Une demande de contrôle chez vous ?</h3>
@@ -18,7 +18,7 @@
     <div class="row col-8 mx-auto mt-5">
 
         <!--Card-->
-        <mdb-card *ngFor="let card of cardsServices" class="col-3 mx-auto">
+        <mdb-card *ngFor="let card of cardsServices" class="col-3 mx-auto round">
             <!--Card image-->
             <div class="view overlay waves-light" mdbWavesEffect>
                 <mdb-card-img src="{{card.img}}"></mdb-card-img>

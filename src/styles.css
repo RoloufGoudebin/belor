@@ -19,6 +19,7 @@ html, body{
     color: grey;
 }
 
+
 .rotateHover:hover{
     transition: 0.70s;
     -webkit-transition: 0.70s;

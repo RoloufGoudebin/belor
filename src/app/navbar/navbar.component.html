@@ -16,25 +16,27 @@
     </div>
 </nav>-->
 
-<!--
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar white-text">
     <div class="container-fluid">
-        <a class="navbar-brand " routerLinkActive="active" routerLink="/"><img  src='assets/img/logo.gif'
-                style="max-height:85px; margin-top: -30px;"></a>
+        <a class="navbar-brand " routerLinkActive="active" routerLink="/"><img class="logo"
+                src='assets/img/logo.gif'></a>
         <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class='navbar navbar-collapse' [ngbCollapse]="isNavbarCollapsed" id="navbarCollapse">
+        <div class='navbar navbar-collapse mr-5' [ngbCollapse]="isNavbarCollapsed" id="navbarCollapse">
             <ul class="navbar-nav ml-md-auto">
                 <li class="nav-item my-auto">
-                    <a class="nav-link py-0" routerLinkActive="active" routerLink="/"><i class="bi bi-house-fill"></i></a>
+                    <a class="nav-link py-0 active" routerLinkActive="active" routerLink="/">
+                        <mdb-icon fas icon="home"></mdb-icon>
+                    </a>
                 </li>
                 <li class="nav-item my-auto">
                     <a class="nav-link py-0" routerLinkActive="active" routerLink="/tarifs">Tarifs</a>
                 </li>
                 <li class="nav-item my-auto">
-                    <a class="nav-link py-0" routerLinkActive="active" routerLink="/nos-activités">Nos activités</a>
+                    <a class="nav-link py-0" routerLinkActive="active" routerLink="/activites">Nos activités</a>
                 </li>
                 <li class="nav-item my-auto">
                     <a class="nav-link py-0" routerLinkActive="active" routerLink="/formations">Formations</a>
@@ -52,45 +54,3 @@
         </div>
     </div>
 </nav>
--->
-
-<!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top animated fadeIn" data-wow-delay="1s" [containerInside]="false">
-
-    <!-- Navbar brand -->
-    <mdb-navbar-brand><a class="navbar-brand" routerLinkActive="active" routerLink="/"><img  src='assets/img/logo.gif' class="img-fluid logo"></a></mdb-navbar-brand>
-  
-    <!-- Collapsible content -->
-    <links>
-  
-      <!-- Links -->
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item my-auto">
-            <a class="nav-link py-0" routerLinkActive="active" routerLink="/"><i class="bi bi-house-fill"></i></a>
-        </li>
-        <li class="nav-item my-auto">
-            <a class="nav-link py-0" routerLinkActive="active" routerLink="/tarifs">Tarifs</a>
-        </li>
-        <li class="nav-item my-auto">
-            <a class="nav-link py-0" routerLinkActive="active" routerLink="/nos-activités">Nos activités</a>
-        </li>
-        <li class="nav-item my-auto">
-            <a class="nav-link py-0" routerLinkActive="active" routerLink="/formations">Formations</a>
-        </li>
-        <li class="nav-item my-auto">
-            <a class="nav-link py-0" routerLinkActive="active" routerLink="/liens">Liens</a>
-        </li>
-        <li class="nav-item my-auto">
-            <a class="nav-link py-0" routerLinkActive="active" routerLink="/blog">Blog</a>
-        </li>
-        <li class="nav-item my-auto">
-            <a class="nav-link py-0" routerLinkActive="active" routerLink="/contact">Contact</a>
-        </li>
-  
-      </ul>
-      <!-- Links -->
-    </links>
-    <!-- Collapsible content -->
-  
-  </mdb-navbar>
-  <!--/.Navbar-->
