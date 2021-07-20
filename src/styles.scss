@@ -1,0 +1,70 @@
+html, body{
+    height:100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+
+/*Headings*/
+.heading {
+    font-weight: 700;
+    color: #5d4267;
+}
+.subheading {
+    color: #bcb2c0;
+}
+.subsubheading {
+    color: grey;
+}
+
+
+.rotateHover:hover{
+    transition: 0.70s;
+    -webkit-transition: 0.70s;
+    -moz-transition: 0.70s;
+    -ms-transition: 0.70s;
+    -o-transition: 0.70s;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+/*background maggle*/
+.bg-purple {
+    background: linear-gradient(#851E8A, #4C1E9E);
+}
+
+/*titres*/
+h1 {
+  color: white;
+  font-size: 2em;
+  margin-top: 6em !important;
+}
+h2 {
+  color: white;
+  font-size: 1.2em !important;
+  margin-top: 0.5em !important;
+}
+
+h3 {
+  color: white !important;
+  font-size: 2em !important;
+
+}
+
+h4 {
+  color: white !important;
+  font-size: 0.9em !important;
+
+}
+
+
+/*buttons*/
+button {
+  color: white !important;
+  font-size: 0.7em  !important;
+  margin-top: 5em !important;
+}
