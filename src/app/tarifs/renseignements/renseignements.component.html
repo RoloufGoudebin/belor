@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="h2">Je suis : </div>
+
+        <!--Type de clients-->
+        <button *ngFor="let typeOfClient of typeOfClients; let i = index;" (click)="choseClient(i)"  mdbBtn type="button"
+            outline="true" class="col-2 mr-5" mdbWavesEffect>{{typeOfClient.type}}</button>
+
+        <!--Professionels-->
+        <p *ngIf="typeOfClients[1].active">
+            <button (click)="submitPro(1)" mdbBtn type="button"
+            outline="true" color="success" class="col-4 mt-5" mdbWavesEffect>Renseignez vos coordonnées >></button>
+        </p>
+
+        <!--Particuliers-->
+
+
+
+    </div>
+</div>

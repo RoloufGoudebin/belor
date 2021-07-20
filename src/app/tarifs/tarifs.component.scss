@@ -1,0 +1,16 @@
+.circle.validated{
+    background-color: green !important;
+}
+
+.label.validated{
+    color: green !important;
+}
+
+li.validated::after{
+    color: green !important;
+    background-color: green !important;
+}
+
+li.validatedBefore::before{
+    background-color: green !important;
+}
