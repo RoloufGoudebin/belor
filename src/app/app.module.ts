@@ -20,6 +20,9 @@ import { ControlsComponent } from './home/controls/controls.component';
 import { WhyComponent } from './home/why/why.component';
 import { ConsultCoordinationComponent } from './home/consult-coordination/consult-coordination.component';
 import { FooterComponent } from './footer/footer.component';
+import { RenseignementsComponent } from './tarifs/renseignements/renseignements.component';
+import { CoordonneesComponent } from './tarifs/coordonnees/coordonnees.component';
+import { DisponibilitesComponent } from './tarifs/disponibilites/disponibilites.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,9 @@ import { FooterComponent } from './footer/footer.component';
     WhyComponent,
     ConsultCoordinationComponent,
     FooterComponent,
+    RenseignementsComponent,
+    CoordonneesComponent,
+    DisponibilitesComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

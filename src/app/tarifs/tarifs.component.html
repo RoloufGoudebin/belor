@@ -1,1 +1,29 @@
-<p>tarifs works!</p>
+<div class="container pt-5 mt-5">
+    <h1>Simulez le prix de votre contrôle</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Stepers Wrapper -->
+            <ul class="stepper stepper-horizontal">
+
+                <!-- Différentes étapes -->
+                <li *ngFor="let step of steps; let i = index;" [ngClass]="{validated: step.valid, validatedBefore: validatedBefore(i)}">
+                    <a (click)="changeCurrentStep(i)">
+                        <span class="circle" [ngClass]="{validated: step.valid}">{{i+1}}</span>
+                        <span class="label" [ngClass]="{validated: step.valid}">{{step.type}}</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <!--Choix de l'étape-->
+    <div class="row">
+        <app-renseignements (onSubmit)="nextStep(currentStep)" *ngIf="currentStep==0"></app-renseignements>
+        <app-coordonnees *ngIf="currentStep==1"></app-coordonnees>
+        <app-disponibilites *ngIf="currentStep==2"></app-disponibilites>
+    </div>
+
+
+</div>
