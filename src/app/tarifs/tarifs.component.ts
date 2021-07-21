@@ -18,7 +18,6 @@ export class TarifsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.steps);
   }
 
   nextStep(i: number) {
@@ -30,15 +29,11 @@ export class TarifsComponent implements OnInit {
 
   changeCurrentStep(i: number) {
     this.currentStep = i;
-    console.log(this.currentStep);
   }
 
   validatedBefore(i: number) {
-    console.log(i);
     if (i > 0) {
-      console.log(i);
       if (this.steps[i-1].valid) {
-        console.log("blablabla")
         return true;
       }
     }
