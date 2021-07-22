@@ -6,7 +6,7 @@
             <ul class="stepper stepper-horizontal">
 
                 <!-- Différentes étapes -->
-                <li *ngFor="let step of steps; let i = index;" [ngClass]="{validated: step.valid, validatedBefore: validatedBefore(i)}">
+                <li class="mx auto" *ngFor="let step of steps; let i = index;" [ngClass]="{validated: step.valid, validatedBefore: validatedBefore(i)}">
                     <a (click)="changeCurrentStep(i)">
                         <span class="circle" [ngClass]="{validated: step.valid}">{{i+1}}</span>
                         <span class="label" [ngClass]="{validated: step.valid}">{{step.type}}</span>

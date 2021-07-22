@@ -1,16 +1,16 @@
 .circle.validated{
-    background-color: green !important;
+    background-color: #3a51a1 !important;
 }
 
 .label.validated{
-    color: green !important;
+    color: #3a51a1 !important;
 }
 
 li.validated::after{
-    color: green !important;
-    background-color: green !important;
+    color: #3a51a1 !important;
+    background-color: #3a51a1 !important;
 }
 
 li.validatedBefore::before{
-    background-color: green !important;
+    background-color: #3a51a1 !important;
 }
