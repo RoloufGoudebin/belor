@@ -22,27 +22,16 @@
 
         <!--Card-->
         <mdb-card *ngFor="let card of cardsServices" class="col-3 mx-auto round">
-            <!--Card image-->
-            <div class="view overlay waves-light card-img" mdbWavesEffect>
-                <mdb-card-img src="{{card.img}}"></mdb-card-img>
-                <a>
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-            </div>
-            <!--/.Card image-->
 
-            <!--Button-->
-            <a mdbBtn floating="true" gradient="blue" class="btn-action ml-auto mr-4 rotateHover" mdbWavesEffect>
-                <mdb-icon fas icon="chevron-right" class="pl-1 waves-light" mdbWavesEffect>
-                </mdb-icon>
-            </a>
+
+
 
             <!--Card content-->
             <mdb-card-body>
 
                 <!--Title-->
                 <mdb-card-title>
-                    <h4>{{card.title}}</h4>
+                    <h2>{{card.title}}</h2>
                 </mdb-card-title>
 
                 <hr>
@@ -51,6 +40,18 @@
             </mdb-card-body>
             <!--/.Card content-->
             <!-- Card footer -->
+            <!--Card image-->
+            <div class="view overlay waves-light card-img" mdbWavesEffect>
+                <mdb-card-img src="{{card.img}}"></mdb-card-img>
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!--Button-->
+            <a mdbBtn floating="true" gradient="blue" class="btn-action ml-auto mr-4 rotateHover" mdbWavesEffect>
+                <mdb-icon fas icon="chevron-right" class="pl-1 waves-light" mdbWavesEffect>
+                </mdb-icon>
+            </a>
         </mdb-card>
         <!--/.Card-->
     </div>
