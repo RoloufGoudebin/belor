@@ -43,6 +43,15 @@ h6 {
   line-height: 1.7;
 }
 
+.rouge {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+.bleu {
+  color: #000076;
+}
+
 
 .bg {
   background: rgb(57,80,161);
