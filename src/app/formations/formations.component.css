@@ -44,6 +44,6 @@ h6 {
 }
 
 
-.top {
-  margin-top: 5em;
-}
+.bg {
+  background: rgb(57,80,161);
+  background: linear-gradient(108deg, rgba(57,80,161,1) 0%, rgba(63,111,167,1) 49%);}
