@@ -52,6 +52,9 @@ h6 {
   color: #000076;
 }
 
+.top {
+  margin-top: 3em;
+}
 
 .bg {
   background: rgb(57,80,161);
