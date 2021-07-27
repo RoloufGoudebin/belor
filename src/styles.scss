@@ -6,6 +6,12 @@ html, body{
     height: 100%;
 }
 
+@import "~ng-uikit-pro-standard/assets/scss/core/colors";
+@import "~ng-uikit-pro-standard/assets/scss/core/variables";
+@import "~ng-uikit-pro-standard/assets/scss/core/variables-pro";
+
+@import "~ng-uikit-pro-standard/assets/scss/sections-pro/_contacts-pro.scss";
+
 
 /*Headings*/
 .heading {
@@ -32,10 +38,14 @@ html, body{
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
 }
-/*background maggle*/
+/*background*/
 .bg-purple {
     background: linear-gradient(#851E8A, #4C1E9E);
 }
+
+.bg {
+  background: rgb(57,80,161);
+  background: linear-gradient(108deg, rgba(57,80,161,1) 0%, rgba(63,111,167,1) 49%);}
 
 /*titres*/
 h1 {
@@ -60,6 +70,17 @@ button {
   margin-top: 5em !important;
 }
 
+
+/*belor couleur*/
+.rouge {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+.bleu {
+  color: #000076;
+}
+
 /*Fucking autocomplete couleur normale*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -73,3 +94,4 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px white inset !important;
   transition: background-color 5000s ease-in-out 0s !important;
 }
+  
