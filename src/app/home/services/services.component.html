@@ -1,58 +1,59 @@
 <section class="control py-5 wow fadeIn">
-    <div class="row mx-0 px-0">
-        <div class="col-12">
-            <h3 class="text-center heading text-white">Une demande de contrôle chez vous ?</h3>
-        </div>
-        <div class="col-5 mx-auto md-form input-group">
-          <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Votre code postal" aria-label="Recipient's username"
-      aria-describedby="button-addon2">
-      <div class="input-group-append">
-          <button mdbBtn gradient="blue" rounded="true" size="md" class="m-0 px-5" type="button"
-              id="button-addon2" mdbWavesEffect>GO</button>
-  </div>
-
-            </div>
-        </div>
-        <div class="col-12">
-            <h4 class="text-center text-white">Organisme de contrôle agréé et accrédité n°355-INSP</h4>
-        </div>
+  <div class="row mx-0 px-0">
+    <div class="col-12">
+      <h3 class="text-center heading text-white">Une demande de contrôle chez vous ?</h3>
     </div>
-    <div class="row col-8 mx-auto mt-5">
+    <div class="col-5 mx-auto md-form input-group">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Votre code postal" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button mdbBtn gradient="blue" rounded="true" size="md" class="m-0 px-5" type="button" id="button-addon2" mdbWavesEffect>GO</button>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-12">
+      <h4 class="text-center text-white">Organisme de contrôle agréé et accrédité n°355-INSP</h4>
+    </div>
+  </div>
+  <div class="row col-8 mx-auto mt-5">
+
+
 
         <!--Card-->
-        <mdb-card *ngFor="let card of cardsServices" class="col-3 mx-auto round">
+        <mdb-card cascade="true" *ngFor="let card of cardsServices" narrower="true" class="col-3 mx-auto">
 
-
-
-
-            <!--Card content-->
-            <mdb-card-body>
-
-                <!--Title-->
-                <mdb-card-title>
-                    <h2>{{card.title}}</h2>
-                </mdb-card-title>
-
-                <hr>
-                <!--Text-->
-                <p class="font-small grey-dark-text mb-0">{{card.body}}</p>
-            </mdb-card-body>
-            <!--/.Card content-->
-            <!-- Card footer -->
-            <!--Card image-->
-            <div class="view overlay waves-light card-img" mdbWavesEffect>
-                <mdb-card-img src="{{card.img}}"></mdb-card-img>
-                <a>
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-            </div>
-            <!--Button-->
-            <a mdbBtn floating="true" gradient="blue" class="btn-action ml-auto mr-4 rotateHover" mdbWavesEffect>
-                <mdb-icon fas icon="chevron-right" class="pl-1 waves-light" mdbWavesEffect>
-                </mdb-icon>
+          <!--Card image-->
+          <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+            <mdb-card-img src="{{card.img}}"></mdb-card-img>
+            <a>
+              <div class="mask rgba-white-slight"></div>
             </a>
+          </div>
+          <!--/Card image-->
+
+
+          <!--Button-->
+          <a mdbBtn floating="true" gradient="blue" class="btn-action ml-auto mr-4 mdb-color lighten-3 waves-light rotateHover" mdbWavesEffect>
+            <mdb-icon fas icon="chevron-right" class="pl-1 waves-light" mdbWavesEffect>
+            </mdb-icon>
+          </a>
+
+
+          <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+            <!--Title-->
+            <h3 class="card-title bleu">{{card.title}}</h3>
+            <hr class="text-light">
+            <!--Text-->
+
+            <mdb-card-text>
+            <p class="font-small mb-0">{{card.body}}</p>
+            </mdb-card-text>
+
+
+
+          </mdb-card-body>
+          <!--/.Card content-->
+
         </mdb-card>
         <!--/.Card-->
-    </div>
-</section>
