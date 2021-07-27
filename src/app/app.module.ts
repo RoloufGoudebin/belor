@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,8 @@ import { FooterComponent } from './footer/footer.component';
 import { RenseignementsComponent } from './tarifs/renseignements/renseignements.component';
 import { CoordonneesComponent } from './tarifs/coordonnees/coordonnees.component';
 import { DisponibilitesComponent } from './tarifs/disponibilites/disponibilites.component';
+
+import { ConnectionService } from './connection.service';
 
 @NgModule({
   declarations: [
@@ -49,9 +52,10 @@ import { DisponibilitesComponent } from './tarifs/disponibilites/disponibilites.
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgbModule,
+    FormsModule, ReactiveFormsModule,
     MDBBootstrapModulesPro.forRoot()
   ],
-  providers: [],
+  providers: [ConnectionService],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
