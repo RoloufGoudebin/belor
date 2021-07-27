@@ -32,10 +32,14 @@ html, body{
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
 }
-/*background maggle*/
+/*background*/
 .bg-purple {
     background: linear-gradient(#851E8A, #4C1E9E);
 }
+
+.bg {
+  background: rgb(57,80,161);
+  background: linear-gradient(108deg, rgba(57,80,161,1) 0%, rgba(63,111,167,1) 49%);}
 
 /*titres*/
 h1 {
@@ -58,4 +62,14 @@ h4 {
 button {
   font-size: 0.7em  !important;
   margin-top: 5em !important;
+}
+
+/*belor couleur*/
+.rouge {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+.bleu {
+  color: #000076;
 }

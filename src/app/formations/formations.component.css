@@ -43,19 +43,6 @@ h6 {
   line-height: 1.7;
 }
 
-.rouge {
-  text-decoration: underline;
-  text-decoration-color: red;
-}
-
-.bleu {
-  color: #000076;
-}
-
 .top {
   margin-top: 3em;
 }
-
-.bg {
-  background: rgb(57,80,161);
-  background: linear-gradient(108deg, rgba(57,80,161,1) 0%, rgba(63,111,167,1) 49%);}
