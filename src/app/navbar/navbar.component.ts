@@ -8,13 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   navLinks = [
-    { title: "Home", link: "/" },
-    { title: "Tarifs", link: "/tarifs" },
-    { title: "Nos activités", link: "/activites" },
-    { title: "Formations", link: "/formations" },
-    { title: "Liens", link: "/liens" },
-    { title: "Blog", link: "/blog" },
-    { title: "Contact", link: "/contact" }
+    { title: "Home", link: "/", dropdown: false },
+    { title: "Tarifs", link: "/tarifs", dropdown: false },
+    {
+      title: "Nos activités", link: "/activites", dropdown: true,
+      navs:
+        [
+          { title: "Contrôles", link: "/controles" },
+          { title: "Consultance", link: "/consultance" },
+          { title: "Coordination", link: "/coordination" }
+        ]
+    },
+    { title: "Formations", link: "/formations", dropdown: false },
+    { title: "Liens", link: "/liens", dropdown: false },
+    { title: "Blog", link: "/blog", dropdown: false },
+    { title: "Contact", link: "/contact", dropdown: false }
   ]
 
   constructor() { }

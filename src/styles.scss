@@ -3,7 +3,7 @@ html, body{
 }
 
 .full-height {
-    height: 100%;
+    min-height: 100%;
 }
 
 @import "~ng-uikit-pro-standard/assets/scss/core/colors";
@@ -44,8 +44,9 @@ html, body{
 }
 
 .bg {
-  background: rgb(57,80,161);
-  background: linear-gradient(108deg, rgba(57,80,161,1) 0%, rgba(63,111,167,1) 49%);}
+  background: rgb(57,80,161) !important;
+  background: linear-gradient(108deg, rgba(57,80,161,1) 0%, rgba(63,111,167,1) 49%) !important;
+}
 
 /*titres*/
 h1 {
@@ -67,7 +68,6 @@ h4 {
 /*Boutons*/
 button {
   font-size: 0.7em  !important;
-  margin-top: 5em !important;
 }
 
 

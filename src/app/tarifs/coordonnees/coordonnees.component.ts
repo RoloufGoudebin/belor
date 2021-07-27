@@ -31,7 +31,7 @@ export class CoordonneesComponent implements OnInit {
       'contactFormPhone': ['', Validators.compose([Validators.required, Validators.pattern("^((\\+32-?)|0)?[0-9]{8,14}$")])],
       'contactFormStreet': ['', Validators.required],
       'contactFormCity': ['', Validators.required],
-      'contactFormZip': ['', Validators.compose([Validators.required, Validators.pattern("^s[0-9]{4}$")])],
+      'contactFormZip': ['', Validators.compose([Validators.required, Validators.pattern("^[0-9]{4}$")])],
 
     });
   }

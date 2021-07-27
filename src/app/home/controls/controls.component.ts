@@ -9,32 +9,32 @@ export class ControlsComponent implements OnInit {
 
   controlsFeatures = [
     {
-      icon: "home",
+      img : "assets/img/boitier.jpg",
       title: "Certificat PEB",
       body: "Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas excommuni. At nos hinc posthac, sitientis piros Afros."
     },
     {
-      icon: "plug",
+      img : "",
       title: "Installation électrique",
       body: "Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas excommuni. At nos hinc posthac, sitientis piros Afros."
     },
     {
-      icon: "solar-panel",
+      img : "",
       title: "Panneaux photovoltaïques",
       body: "Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas excommuni. At nos hinc posthac, sitientis piros Afros."
     },
     {
-      icon: "exclamation",
+      img : "assets/img/boitier.jpg",
       title: "Installation gaz",
       body: "Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas excommuni. At nos hinc posthac, sitientis piros Afros."
     },
     {
-      icon: "fire",
+      img : "",
       title: "Paratonnerre",
       body: "Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas excommuni. At nos hinc posthac, sitientis piros Afros."
     },
     {
-      icon: "thermometer-three-quarters",
+      img : "",
       title: "Thermographie",
       body: "Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas excommuni. At nos hinc posthac, sitientis piros Afros."
     },

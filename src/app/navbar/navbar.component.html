@@ -26,10 +26,19 @@
 
     <div class='navbar navbar-collapse mr-5 my-0 py-0' [ngbCollapse]="isNavbarCollapsed" id="navbarCollapse">
         <ul class="navbar-nav ml-md-auto my-0 py-0">
-            <li *ngFor="let navLink of navLinks" class="nav-item" routerLinkActive="active"
-                routerLink="{{navLink.link}}" [routerLinkActiveOptions]="{ exact: true }">
-                <a class=" nav-link py-0">{{navLink.title}}</a>
-            </li>
+            <div *ngFor="let navLink of navLinks">
+                <li *ngIf="navLink.dropdown == false" class="nav-item" routerLinkActive="active"
+                    routerLink="{{navLink.link}}" [routerLinkActiveOptions]="{ exact: true }">
+                    <a class="nav-link py-0">{{navLink.title}}</a>
+                </li>
+                <li *ngIf="navLink.dropdown" class="nav-item" dropdown>
+                    <a dropdownToggle mdbWavesEffect type="button" class="dropdown-toggle py-0 nav-link" mdbWavesEffect>{{navLink.title}} </a>
+                    <div *dropdownMenu class=" dropdown-menu dropdown mt-5 nav-item" role="menu">
+                        <a *ngFor="let navLink of navLink.navs" class="dropdown-item waves-light" mdbWavesEffect
+                            routerLink="{{navLink.link}}">{{navLink.title}}</a>
+                    </div>
+                </li>
+            </div>
         </ul>
     </div>
 </nav>

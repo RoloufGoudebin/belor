@@ -3,8 +3,8 @@
     <!--Type de clients-->
     <div class="row">
         <h2>Je suis : </h2>
-        <button *ngFor="let typeOfClient of typeOfClients; let i = index;" (click)="choseClient(i)" mdbBtn type="button"
-            outline="true" class="col-2 mr-3 border" [ngClass]="{'border-success': typeOfClient.active}"
+        <button *ngFor="let typeOfClient of typeOfClients; let i = index;"(click)="choseClient(i)" mdbBtn type="button"
+            outline="true" class="col-3 mr-3 border" [ngClass]="{'border-success': typeOfClient.active}"
             mdbWavesEffect>{{typeOfClient.type}}</button>
     </div>
 
@@ -19,14 +19,14 @@
         <div class="row" *ngIf="typeOfClients[0].active">
             <h2>Type de bien: </h2>
             <button *ngFor="let typeOfControl of typeOfControls; let i = index;" (click)="choseDomestique(i)" mdbBtn
-                type="button" outline="true" class="col-2 mr-3 border"
-                [ngClass]="{'border-success': typeOfControl.active}" mdbWavesEffect>{{typeOfControl.type}}</button>
+                type="button" outline="true" class="col-3 mr-3 border"
+                [ngClass]="{'selected': typeOfControl.active}" mdbWavesEffect>{{typeOfControl.type}}</button>
 
             <!--Domestique-->
-            <div class="row" *ngIf="typeOfControls[0].active">
+            <div class="row mx-0 px-0" *ngIf="typeOfControls[0].active">
                 <h2>Type de contrôle:</h2>
                 <button *ngFor="let typeOfControl of typeOfControls[0].domestique; let i = index;"
-                    (click)="choseControl(i)" mdbBtn type="button" outline="true" class="col-2 mr-3 border"
+                    (click)="choseControl(i)" mdbBtn type="button" outline="true" class="col-3 mr-3 border"
                     [ngClass]="{'border-success': typeOfControl.active}"
                     mdbWavesEffect>{{typeOfControl.control}}</button>
 
@@ -86,9 +86,11 @@
 
                 <!--Bouton validation-->
                 <div class="row" *ngFor="let choice of typeOfControls[0].domestique; let i = index;">
-                    <button *ngIf="choice.active" (click)="submitPro(1)" mdbBtn type="button" outline="true" color="success"
-                        class="col-4 mt-5" mdbWavesEffect>Évaluez le prix >></button>
+                    <button *ngIf="choice.active" (click)="submitPro(1)" mdbBtn type="button" outline="true"
+                        color="success" class="col-4 mt-5" mdbWavesEffect>Évaluez le prix >></button>
                 </div>
 
             </div>
         </div>
+    </div>
+</div>
