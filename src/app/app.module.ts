@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,9 @@ import { CoordonneesComponent } from './tarifs/coordonnees/coordonnees.component
 import { DisponibilitesComponent } from './tarifs/disponibilites/disponibilites.component';
 
 import { ConnectionService } from './connection.service';
+import { ControlesComponent } from './activites/controles/controles.component';
+import { ConsultanceComponent } from './activites/consultance/consultance.component';
+import { CoordinationComponent } from './activites/coordination/coordination.component';
 
 @NgModule({
   declarations: [
@@ -47,12 +51,16 @@ import { ConnectionService } from './connection.service';
     RenseignementsComponent,
     CoordonneesComponent,
     DisponibilitesComponent,
+    ControlesComponent,
+    ConsultanceComponent,
+    CoordinationComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgbModule,
     FormsModule, ReactiveFormsModule,
+    BrowserAnimationsModule,
     MDBBootstrapModulesPro.forRoot()
   ],
   providers: [ConnectionService],

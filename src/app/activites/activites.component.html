@@ -1,1 +1,26 @@
-<p>activites works!</p>
+<section class="bg mt-n5 full-height">
+    <div class="container-fluid pt-5 mt-5 nav-tabs">
+
+        <h1 class="display-4">Découvrez en plus sur nos activités</h1>
+        <!-- Nav Tabs -->
+        <div class="col-10 mx-auto">
+            <mdb-tabset #staticTabs [buttonClass]="'md-tabs tabs-3'" [contentClass]="'card'" class="nav-tabs mt-n5">
+
+                <!--Panel 1-->
+                <mdb-tab heading="{{tabs[0].title}}">
+                    <app-controles></app-controles>
+                </mdb-tab>
+
+                <!--Panel 2-->
+                <mdb-tab heading="{{tabs[1].title}}">
+                    <app-consultance></app-consultance>
+                </mdb-tab>
+
+                <!--Panel 3-->
+                <mdb-tab heading="{{tabs[2].title}}">
+                    <app-coordination></app-coordination>
+                </mdb-tab>
+            </mdb-tabset>
+        </div>
+    </div>
+</section>

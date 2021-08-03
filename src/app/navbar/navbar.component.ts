@@ -14,9 +14,9 @@ export class NavbarComponent implements OnInit {
       title: "Nos activités", link: "/activites", dropdown: true,
       navs:
         [
-          { title: "Contrôles", link: "/controles" },
-          { title: "Consultance", link: "/consultance" },
-          { title: "Coordination", link: "/coordination" }
+          { title: "Contrôles", link: "/activites/controles" },
+          { title: "Consultance", link: "/activites/consultance" },
+          { title: "Coordination", link: "/activites/coordination" }
         ]
     },
     { title: "Formations", link: "/formations", dropdown: false },
