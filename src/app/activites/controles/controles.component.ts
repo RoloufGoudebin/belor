@@ -9,10 +9,8 @@ export class ControlesComponent implements OnInit {
 
   tabs = [
     {
-      title: "Contrôle des installations électriques domestiques", text: [
-        { class: "h2", text: "couillon"} ],
-    },
-    { title: "Contrôle des installations électriques industrielles" },
+      title: "Contrôle des installations électriques domestiques"},
+    { title: "Contrôle des installations électriques industrielles"},
     { title: "Contrôle des installations paratonnerres" },
     { title: "Contrôle des panneaux photovoltaïques" },
     { title: "Certificat de performance energétique - PEB" },
