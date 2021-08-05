@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-controles',
   templateUrl: './controles.component.html',
-  styleUrls: ['./controles.component.css']
+  styleUrls: ['./controles.component.css', '../activites.component.scss']
 })
 export class ControlesComponent implements OnInit {
 
