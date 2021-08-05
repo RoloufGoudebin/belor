@@ -1,8 +1,8 @@
 <section class="bg controls py-5 text-center wow fadeIn" data-wow-offset="10">
-    <h1>Nos contrôles Belor</h1>
-    <h2>Professionnels & rapides</h2>
+    <h1 class="bleu rouge">Nos contrôles Belor</h1>
+    <h2 class="heading- bleu">Professionnels & rapides</h2>
 
-    <div class="row col-8 mx-auto text-black">
+    <div class="row col-8 mx-auto bleu">
 
         <div *ngFor="let feature of controlsFeatures | slice:0:3 " class="col-md-3 mx-auto">
             <img src='{{feature.img}}' class="img-fluid" alt="Service Belor, organisme de contrôle">
@@ -12,7 +12,7 @@
 
     </div>
 
-    <div class="row col-8 mx-auto text-black">
+    <div class="row col-8 mx-auto bleu">
 
         <div *ngFor="let feature of controlsFeatures | slice:3:6 " class="col-md-3 mx-auto">
             <img src='{{feature.img}}' class="img-fluid" alt="Service Belor, organisme de contrôle">
