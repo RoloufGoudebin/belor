@@ -1,1 +1,81 @@
-<p>consultance works!</p>
+<mdb-tabset #staticTabs [vertical]="true" [buttonClass]="'md-tabs tabs-3'" [contentClass]="'card'">
+
+
+    <!--Bureau de contrôles pour le suivi des chantiers génie civil-->
+    <mdb-tab heading="Bureau de contrôle pour le suivi des chantiers génie civil">
+        <h3>Bureau de contrôle pour le suivi des chantiers génie civil</h3>
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum."
+        </p>
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum."
+        </p>
+
+        <h4>Références</h4>
+        <mdb-carousel [isControls]="true" [interval]="'0'" [animation]="'slide'">
+            <mdb-carousel-item *ngFor="let item of slides; let i = index">
+                <div class="col-md-4" *ngFor="let card of item; let cardIndex = index">
+                    <mdb-card class="my-1">
+                        <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
+                        <mdb-card-body>
+                            <mdb-card-title>
+                                <h4>{{card.title}}</h4>
+                            </mdb-card-title>
+                            <p>{{card.description}}</p>
+                        </mdb-card-body>
+                    </mdb-card>
+                </div>
+            </mdb-carousel-item>
+        </mdb-carousel>
+
+    </mdb-tab>
+
+    <!--Conformité des équipements-->
+    <mdb-tab heading="Assistance à la mise en conformité des équipements de travail">
+        <h3>Assistance à la mise en conformité des équipements de travail</h3>
+        <p><span class="texte">Notre analyse de risque consiste à vérifier les prescriptions minimales de sécurité
+                de l’équipement de travail et d’évaluer les risques liés à l’utilisation de l’équipement de travail
+                en prenant les mesures nécessaires afin que les équipements de travail mis à la disposition des
+                travailleurs dans l’entreprise soient appropriés au travail à réaliser ou convenablement adaptés à
+                cet effet, permettant d’assurer la sécurité et la santé des travailleurs lors de l’utilisation de
+                ces équipements de travail.
+            </span></p>
+        <p class="texte"><strong>Base réglementaire</strong></p>
+        <p class="texte">&#8211; DIRECTIVE SOCIALE A.R. du 12 août 1993 et amendements<br />
+            &#8211; DIRECTIVE EUROPEEN EN 209/104/CE du 16 septembre 2009<br />
+            &#8211; DIRECTIVE BRUIT 2003/10/CE A.R. du 13 juin 2005</p>
+        <h3 class="texte"><strong>Documents à mettre à disposition pour le contrôle </strong></h3>
+        <ul type="disc">
+            <li class="texte">Le dossier technique de la machine dans la langue de l’utilisateur</li>
+            <li class="texte">La déclaration de conformité CE</li>
+        </ul>
+        <h3 class="texte"><strong>Informations générales</strong></h3>
+        <ul>
+            <li class="texte">Pour les équipements de travail qui sont soumis à l’A.R. du 5 mai 1995, la présomption
+                de sécurité est apportée par les éléments de certification du fabricant (marquage CE et déclaration
+                de conformité)</li>
+        </ul>
+        <ul>
+            <li class="texte">Pour l’assemblage des différentes machines et en se basant sur la déclaration de
+                conformité CE présenté par le responsable des Machines, notre inspection vise uniquement à contrôler
+                le respect des prescriptions minimales de sécurité et de santé de l’équipement de travail.</li>
+        </ul>
+        <ul>
+            <li class="texte">Nous vous signalons que suivant les prescriptions du Code sur le bien-être au travail
+                l’employeur doit prendre les mesures nécessaires afin que les travailleurs reçoivent une formation
+                adéquate spécifique et disposent d’informations adéquates et, le cas échéant, de notices
+                d’information sur les équipements de travail utilisés au travail.</li>
+        </ul>
+        <p><span class="texte"> Nous vous signalons que vous avez l’obligation de soumettre le rapport au Comité
+                pour la prévention et la  protection au Travail.</span></p>
+
+    </mdb-tab>
+</mdb-tabset>
