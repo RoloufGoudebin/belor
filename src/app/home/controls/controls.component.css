@@ -8,9 +8,13 @@ h1 {
 
 h2{
 font-size: 1em;
+margin-bottom: 4em;
 
 }
 
+p {
+  color:#F2F3F4;
+}
 
 img {
   max-width: 35%;
