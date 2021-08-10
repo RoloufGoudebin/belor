@@ -1,6 +1,6 @@
-<section class="full-height bg">
+<section class="full-height">
 
-    <div class="container pt-5 mt-5">
+    <div class="container">
     <h1 class="display-5 font-weight-bold bleu rouge">Simulez le prix de votre contrôle</h1>
     <div class="row">
         <div class="col-md-12">
@@ -22,7 +22,7 @@
 
     <!--Choix de l'étape-->
     <div class="row">
-        <app-renseignements (onSubmit)="nextStep(currentStep)" *ngIf="currentStep==0"></app-renseignements>
+        <app-renseignements (onSubmit)="nextStep(currentStep)" [(typeOfControls)]="choiceControl" *ngIf="currentStep==0"></app-renseignements>
         <app-coordonnees *ngIf="currentStep==1"></app-coordonnees>
         <app-disponibilites *ngIf="currentStep==2"></app-disponibilites>
     </div>

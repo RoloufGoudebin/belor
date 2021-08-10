@@ -1,7 +1,7 @@
 <div class="row">
 
     <!--Formulaire-->
-    <form class="col-6" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <form class="col-6 white rounded mb-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
 
         <!--Nom et prénom -->
         <div class="row">
@@ -93,4 +93,8 @@
             Send
         </button>
     </form>
+
+    <div class="ml-auto col-5 white rounded">
+        <h3>Récapitulatif de votre demande</h3>
+    </div>
 </div>

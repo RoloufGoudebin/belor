@@ -13,10 +13,10 @@ import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'tarifs', component: TarifsComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full', data: {animationState: 'One'} },
+  { path: 'tarifs', component: TarifsComponent, data: {animationState: 'Two'} },
   {
-    path: 'activites', component: ActivitesComponent,
+    path: 'activites', component: ActivitesComponent, data: {animationState: 'Three'},
     children: [
       {
         path: 'controles', 
@@ -32,10 +32,10 @@ const routes: Routes = [
       }
     ]
   },
-  { path: 'formations', component: FormationsComponent },
-  { path: 'liens', component: LiensComponent },
-  { path: 'blog', component: BlogComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'formations', component: FormationsComponent, data: {animationState: 'Four'} },
+  { path: 'liens', component: LiensComponent, data: {animationState: 'Five'} },
+  { path: 'blog', component: BlogComponent, data: {animationState: 'Six'} },
+  { path: 'contact', component: ContactComponent, data: {animationState: 'Seven'} }
 
 ];
 

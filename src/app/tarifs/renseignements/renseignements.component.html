@@ -3,35 +3,35 @@
     <!--Type de clients-->
     <div class="row">
         <h2>Je suis : </h2>
-        <button *ngFor="let typeOfClient of typeOfClients; let i = index;"(click)="choseClient(i)" mdbBtn type="button"
-            outline="true" class="col-3 mr-3 border" [ngClass]="{'border-success': typeOfClient.active}"
-            mdbWavesEffect>{{typeOfClient.type}}</button>
+        <button *ngFor="let typeOfClient of typeOfControls; let i = index;"(click)="choseClient(i)" mdbBtn type="button"
+            outline="true" class="col-3 mr-3 border" [ngClass]="{'border-success': typeOfControls[i].active}"
+            mdbWavesEffect>{{typeOfControls[i].type}}</button>
     </div>
 
     <!--Professionels-->
-    <div class="row" *ngIf="typeOfClients[1].active">
+    <div class="row" *ngIf="typeOfControls[1].active">
         <button (click)="submitPro(1)" mdbBtn type="button" outline="true" color="success" class="col-4 mt-5"
             mdbWavesEffect>Renseignez vos coordonnées >></button>
     </div>
 
     <!--Particuliers-->
     <div>
-        <div class="row" *ngIf="typeOfClients[0].active">
+        <div class="row" *ngIf="typeOfControls[0].active">
             <h2>Type de bien: </h2>
-            <button *ngFor="let typeOfControl of typeOfControls; let i = index;" (click)="choseDomestique(i)" mdbBtn
+            <button *ngFor="let typeOfControl of typeOfControls[0].particulier; let i = index;" (click)="choseDomestique(i)" mdbBtn
                 type="button" outline="true" class="col-3 mr-3 border"
                 [ngClass]="{'selected': typeOfControl.active}" mdbWavesEffect>{{typeOfControl.type}}</button>
 
             <!--Domestique-->
-            <div class="row mx-0 px-0" *ngIf="typeOfControls[0].active">
+            <div class="row mx-0 px-0" *ngIf="typeOfControls[0].particulier[0].active">
                 <h2>Type de contrôle:</h2>
-                <button *ngFor="let typeOfControl of typeOfControls[0].domestique; let i = index;"
+                <button *ngFor="let typeOfControl of typeOfControls[0].particulier[0].domestique; let i = index;"
                     (click)="choseControl(i)" mdbBtn type="button" outline="true" class="col-3 mr-3 border"
                     [ngClass]="{'border-success': typeOfControl.active}"
                     mdbWavesEffect>{{typeOfControl.control}}</button>
 
                 <!--Électrique-->
-                <div class="row" *ngIf="typeOfControls[0].domestique[0].active">
+                <div class="row" *ngIf="typeOfControls[0].particulier[0].domestique[0].active">
                     <div class="md-form">
                         <input mdbInput type="text" id="form1" class="form-control">
                         <label for="form1" class="">Surface du bien (m²)</label>
@@ -39,33 +39,33 @@
                 </div>
 
                 <!--Panneaux photovoltaïques-->
-                <div class="row" *ngIf="typeOfControls[0].domestique[1].active">
+                <div class="row" *ngIf="typeOfControls[0].particulier[0].domestique[1].active">
                     <div class="md-form col-8">
                         <select class="browser-default custom-select">
                             <option selected>Faites votre sélection</option>
-                            <option *ngFor="let option of typeOfControls[0].domestique[1].choix; let i = index;"
+                            <option *ngFor="let option of typeOfControls[0].particulier[0].domestique[1].choix; let i = index;"
                                 [value]="option">{{ option }}</option>
                         </select>
                     </div>
                 </div>
 
                 <!--Gaz-->
-                <div class="row" *ngIf="typeOfControls[0].domestique[2].active">
+                <div class="row" *ngIf="typeOfControls[0].particulier[0].domestique[2].active">
                     <div class="md-form col-8">
                         <select class="browser-default custom-select">
                             <option selected>Faites votre sélection</option>
-                            <option *ngFor="let option of typeOfControls[0].domestique[2].choix; let i = index;"
+                            <option *ngFor="let option of typeOfControls[0].particulier[0].domestique[2].choix; let i = index;"
                                 [value]="option">{{ option }}</option>
                         </select>
                     </div>
                 </div>
 
                 <!--Bornes de recharge-->
-                <div class="row" *ngIf="typeOfControls[0].domestique[3].active">
+                <div class="row" *ngIf="typeOfControls[0].particulier[0].domestique[3].active">
                     <div class="md-form col-8">
                         <select class="browser-default custom-select">
                             <option selected>Faites votre sélection</option>
-                            <option *ngFor="let option of typeOfControls[0].domestique[3].choix; let i = index;"
+                            <option *ngFor="let option of typeOfControls[0].particulier[0].domestique[3].choix; let i = index;"
                                 [value]="option">{{ option }}</option>
                         </select>
                     </div>
@@ -73,9 +73,9 @@
                 </div>
 
                 <!--PEB-->
-                <div class="row" *ngIf="typeOfControls[0].domestique[4].active">
+                <div class="row" *ngIf="typeOfControls[0].particulier[0].domestique[4].active">
                     <h2>Habitation</h2>
-                    <button *ngFor="let typeBien of typeOfControls[0].domestique[4].typeBien; let i = index;"
+                    <button *ngFor="let typeBien of typeOfControls[0].particulier[0].domestique[4].typeBien; let i = index;"
                         (click)="chosePEB(i)" mdbBtn type="button" outline="true" class="col-2 mr-3 border"
                         [ngClass]="{'border-success': typeBien.active}" mdbWavesEffect>{{typeBien.bien}}</button>
                     <div class="md-form">
@@ -85,7 +85,7 @@
                 </div>
 
                 <!--Bouton validation-->
-                <div class="row" *ngFor="let choice of typeOfControls[0].domestique; let i = index;">
+                <div class="row" *ngFor="let choice of typeOfControls[0].particulier[0].domestique; let i = index;">
                     <button *ngIf="choice.active" (click)="submitPro(1)" mdbBtn type="button" outline="true"
                         color="success" class="col-4 mt-5" mdbWavesEffect>Évaluez le prix >></button>
                 </div>
