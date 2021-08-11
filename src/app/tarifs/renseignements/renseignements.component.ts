@@ -38,9 +38,9 @@ export class RenseignementsComponent implements OnInit {
   choseDomestique(i: number) {
     this.typeOfControls[0].particulier[i].active = true;
     // on met tous les autres types à false
-    for (let j = 0; j < this.typeOfControls.length; j++) {
+    for (let j = 0; j < this.typeOfControls[0].particulier.length; j++) {
       if (i != j) {
-        this.typeOfControls[j].active = false;
+        this.typeOfControls[0].particulier[j].active = false;
       }
     }
   }

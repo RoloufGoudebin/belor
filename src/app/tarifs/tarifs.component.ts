@@ -15,7 +15,7 @@ export class TarifsComponent implements OnInit {
 
   currentStep = 0;
 
-  choiceControl = [
+  typeOfControls = [
     {
       type: "particulier",
       active: false,
