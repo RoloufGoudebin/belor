@@ -8,3 +8,11 @@ h3 {
   text-decoration-color: #CE1B3C;
   color: #000076;
 }
+
+.red {
+  background-color: #CC1F3F !important;
+}
+
+::ng-deep.ul.nav.md-tabs.tabs-3.red{
+  background-color: #CC1F3F !important;
+}

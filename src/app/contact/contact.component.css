@@ -1,3 +1,9 @@
 h2 {
   margin-top: 6em !important;
 }
+
+.adresses{
+  text-align-last:justify;
+  margin-right: 0.8em;
+  margin-left: 0.8em;
+}
