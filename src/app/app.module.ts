@@ -31,6 +31,11 @@ import { ControlesComponent } from './activites/controles/controles.component';
 import { ConsultanceComponent } from './activites/consultance/consultance.component';
 import { CoordinationComponent } from './activites/coordination/coordination.component';
 
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +66,9 @@ import { CoordinationComponent } from './activites/coordination/coordination.com
     NgbModule,
     FormsModule, ReactiveFormsModule,
     BrowserAnimationsModule,
-    MDBBootstrapModulesPro.forRoot()
+    MDBBootstrapModulesPro.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [ConnectionService],
   bootstrap: [AppComponent],

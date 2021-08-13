@@ -13,6 +13,14 @@ export class TarifsComponent implements OnInit {
     { type: "Vos disponibilités", valid: false }
   ]
 
+  currentControl= {
+    name : String,
+    nbrChambres : Number,
+    surface: Number,
+    price : Number
+  }
+  
+
   currentStep = 0;
 
   typeOfControls = [
@@ -28,6 +36,12 @@ export class TarifsComponent implements OnInit {
               {
                 control: "Électrique",
                 active: false,
+                choix: [
+                  "Réception – périodique - vente installation électrique avec ou sans schémas",
+                  "Chantier (compteur provisoire pour un an) / Revisite par un même client",
+                  "Compteur supplémentaire dans le même immeuble / Revisite",
+                  "Prévisite conseil + mesures d’isolement + mesure de terre"
+                ],
                 typeBien: [
                   {
                     bien: "Appartement",
@@ -47,7 +61,8 @@ export class TarifsComponent implements OnInit {
                     price: [160, 185, 210, 235, 260, 285, 310, 335, 360, 385],
                     active: false
                   },
-                ]
+                ], 
+                price : [0, 110, 100, 100]
               },
               {
                 control: "Panneaux photovoltaïque",
@@ -67,7 +82,7 @@ export class TarifsComponent implements OnInit {
                   [
                     "Ouverture compteur avec attestation et rapport GRD obligatoires",
                     "Réception / périodique compteur ouvert",
-                    "Par compteur supplémentaire / revisite pour un même client",
+                    "Revisite pour un même client",
                     "Prévisite conseil + contrôle d’étanchéité des canalisations gaz",
                     "Calcul dimensionnement des canalisations gaz"
                   ],

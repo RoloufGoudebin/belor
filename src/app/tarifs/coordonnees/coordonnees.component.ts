@@ -1,6 +1,6 @@
 import { ConnectionService } from '../../connection.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 
 
 @Component({
@@ -14,6 +14,8 @@ export class CoordonneesComponent implements OnInit {
   contactForm: FormGroup;
   disabledSubmitButton: boolean = true;
   optionsSelect: Array<any>;
+
+  @Input() currentControl;
 
   @HostListener('input') oninput() {
 

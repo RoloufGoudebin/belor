@@ -22,10 +22,11 @@
 
     <!--Choix de l'étape-->
     <div class="row">
-        <app-renseignements (onSubmit)="nextStep(currentStep)" [(typeOfControls)]="typeOfControls" *ngIf="currentStep==0"></app-renseignements>
-        <app-coordonnees *ngIf="currentStep==1"></app-coordonnees>
+        <app-renseignements (onSubmit)="nextStep(currentStep)" [currentControl]="currentControl" [typeOfControls]="typeOfControls" *ngIf="currentStep==0"></app-renseignements>
+        <app-coordonnees (onSubmit)="nextStep(currentStep)" [currentControl]="currentControl" *ngIf="currentStep==1"></app-coordonnees>
         <app-disponibilites *ngIf="currentStep==2"></app-disponibilites>
     </div>
+
 
 
 </div>

@@ -14,11 +14,14 @@ export class RenseignementsComponent implements OnInit {
   ]
 
   @Input() typeOfControls;
+  @Input() currentControl;
 
-  ControlActive;
+  nbrChambres: number;
+  selectedOption: string;
 
   @Output() onSubmit = new EventEmitter<any>();
   @Output() refreshTypeOfControls = new EventEmitter<any>();
+  @Output() refreshCurrentControlName = new EventEmitter<any>();
 
   constructor() { }
 
@@ -45,42 +48,81 @@ export class RenseignementsComponent implements OnInit {
     }
   }
 
-  choseControl(i: number) {
+  ChoseElec(i: number) {
+    this.currentControl.name = this.typeOfControls[0].particulier[0].domestique[0].typeBien[i].choice;
+    // on met tous les autres types à false
+    console.log(this.currentControl.name);
+    for (let j = 0; j < this.typeOfControls[0].particulier[0].domestique[0].typeBien.length; j++) {
+      if (i != j) {
+        this.typeOfControls[0].particulier[0].domestique[0].typeBien[j].active = false;
+      }
+    }
+    this.currentControl.name = this.selectedOption;
+  }
 
+  choseControl(i: number) {
     this.typeOfControls[0].particulier[0].domestique[i].active = true;
-    console.log(this.typeOfControls[0].particulier[0].domestique[i]);
-    this.ControlActive = this.typeOfControls[0].particulier[0].domestique[i].choix;
     // on met tous les autres types à false
     for (let j = 0; j < this.typeOfControls[0].particulier[0].domestique.length; j++) {
       if (i != j) {
         this.typeOfControls[0].particulier[0].domestique[j].active = false;
       }
     }
-    this.refreshTypeOfControls.emit(this.typeOfControls);
+    this.currentControl.name = this.typeOfControls[0].particulier[0].domestique[i].control;
   }
 
   chosePEB(i: number) {
 
     this.typeOfControls[0].particulier[0].domestique[4].typeBien[i].active = true;
-    console.log(this.typeOfControls[0].particulier[0].domestique[4].typeBien[i].active);
     // on met tous les autres types à false
     for (let j = 0; j < this.typeOfControls[0].particulier[0].domestique[4].typeBien.length; j++) {
       if (i != j) {
         this.typeOfControls[0].particulier[0].domestique[4].typeBien[j].active = false;
       }
     }
-    this.refreshTypeOfControls.emit(this.typeOfControls);
+    this.currentControl.name = this.typeOfControls[0].particulier[0].domestique[4].typeBien[i].bien.toLowerCase();
   }
 
-
-  getControl(){
-    return this.ControlActive;
-  }
 
 
   //submit pour les pros
   public submitPro(i: number) {
     this.onSubmit.emit(i);
   }
+
+  submit(i: number) {
+    this.onSubmit.emit(i);
+
+
+
+    // Controle électrique
+    if (this.typeOfControls[0].particulier[0].domestique[0].active) {
+      this.currentControl.name = this.selectedOption;
+      this.currentControl.surface = this.currentControl.surface;
+    }
+
+    // Controle panneaux photovoltaïques
+    else if (this.typeOfControls[0].particulier[0].domestique[1].active){
+      this.currentControl.name = "contrôle panneaux photovoltaïques : " + this.selectedOption;
+    }
+
+    // Controle gaz
+    else if(this.typeOfControls[0].particulier[0].domestique[2].active){
+      this.currentControl.name = "Contrôle gaz : " + this.selectedOption;
+
+    }
+
+    // Controle bornes de recharge
+    else if(this.typeOfControls[0].particulier[0].domestique[3].active){
+      this.currentControl.name = "Contrôle bornes de recharge : " + this.selectedOption;
+    }
+
+    // PEB
+    else if (this.typeOfControls[0].particulier[0].domestique[4].active) {
+      this.currentControl.nbrChambres = this.nbrChambres;
+      this.currentControl.name = "Contrôle PEB " + this.currentControl.name + " de " + this.currentControl.nbrChambres + " chambre(s)";
+    }
+  }
+
 
 }
