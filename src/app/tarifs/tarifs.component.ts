@@ -13,13 +13,13 @@ export class TarifsComponent implements OnInit {
     { type: "Vos disponibilités", valid: false }
   ]
 
-  currentControl= {
-    name : String,
-    nbrChambres : Number,
+  currentControl = {
+    name: String,
+    nbrChambres: Number,
     surface: Number,
-    price : Number
+    price: Number
   }
-  
+
 
   currentStep = 0;
 
@@ -29,97 +29,89 @@ export class TarifsComponent implements OnInit {
       active: false,
       particulier: [
         {
-          type: "Domestique",
+          control: "Électrique",
           active: false,
-          domestique:
+          choix: [
+            "Réception – périodique - vente installation électrique avec ou sans schémas",
+            "Chantier (compteur provisoire pour un an) / Revisite par un même client",
+            "Compteur supplémentaire dans le même immeuble / Revisite",
+            "Prévisite conseil + mesures d’isolement + mesure de terre"
+          ],
+          typeBien: [
+            {
+              bien: "Appartement",
+              taille: [150, 200, 250, 300, 350, 400, 450, 500, 550, 600],
+              price: [130, 155, 180, 205, 230, 255, 280, 305, 330, 355],
+              active: false
+            },
+            {
+              type: "Maison",
+              taille: [250, 300, 350, 400, 450, 500, 550, 600],
+              price: [150, 175, 200, 225, 250, 275, 300, 325],
+              active: false
+            },
+            {
+              type: "Commerce/bureaux",
+              taille: [150, 200, 250, 300, 350, 400, 450, 500, 550, 600],
+              price: [160, 185, 210, 235, 260, 285, 310, 335, 360, 385],
+              active: false
+            },
+          ],
+          price: [0, 110, 100, 100]
+        },
+        {
+          control: "Panneaux photovoltaïque",
+          active: false,
+          choix:
+            [
+              "Réception/périodique pour un onduleur ˂ 10 kVA",
+              "Revisite pour un même client ",
+              "Contrôle avec l’installation électrique du bâtiment / onduleur supplémentaire "
+            ],
+          price: [130, 100, 70]
+        },
+        {
+          control: "Gaz",
+          active: false,
+          choix:
+            [
+              "Ouverture compteur avec attestation et rapport GRD obligatoires",
+              "Réception / périodique compteur ouvert",
+              "Revisite pour un même client",
+              "Prévisite conseil + contrôle d’étanchéité des canalisations gaz",
+              "Calcul dimensionnement des canalisations gaz"
+            ],
+          price: [170, 140, 120, 100, 100]
+        },
+        {
+          control: "Bornes de recharge",
+          active: false,
+          choix:
+            [
+              "Réception / périodique",
+              "Revisite pour un même client ",
+              "Contrôle avec l’installation électrique du bâtiment / borne supplémentaire"
+            ],
+          price: [130, 100, 65]
+        },
+        {
+          control: "PEB",
+          active: false,
+          typeBien:
             [
               {
-                control: "Électrique",
-                active: false,
-                choix: [
-                  "Réception – périodique - vente installation électrique avec ou sans schémas",
-                  "Chantier (compteur provisoire pour un an) / Revisite par un même client",
-                  "Compteur supplémentaire dans le même immeuble / Revisite",
-                  "Prévisite conseil + mesures d’isolement + mesure de terre"
-                ],
-                typeBien: [
-                  {
-                    bien: "Appartement",
-                    taille: [150, 200, 250, 300, 350, 400, 450, 500, 550, 600],
-                    price: [130, 155, 180, 205, 230, 255, 280, 305, 330, 355],
-                    active: false
-                  },
-                  {
-                    type: "Maison",
-                    taille: [250, 300, 350, 400, 450, 500, 550, 600],
-                    price: [150, 175, 200, 225, 250, 275, 300, 325],
-                    active: false
-                  },
-                  {
-                    type: "Commerce/bureaux",
-                    taille: [150, 200, 250, 300, 350, 400, 450, 500, 550, 600],
-                    price: [160, 185, 210, 235, 260, 285, 310, 335, 360, 385],
-                    active: false
-                  },
-                ], 
-                price : [0, 110, 100, 100]
+                bien: "Appartement",
+                chambres: [3, 4],
+                price: [205, 240],
+                active: false
               },
               {
-                control: "Panneaux photovoltaïque",
-                active: false,
-                choix:
-                  [
-                    "Réception/périodique pour un onduleur ˂ 10 kVA",
-                    "Revisite pour un même client ",
-                    "Contrôle avec l’installation électrique du bâtiment / onduleur supplémentaire "
-                  ],
-                price: [130, 100, 70]
-              },
-              {
-                control: "Gaz",
-                active: false,
-                choix:
-                  [
-                    "Ouverture compteur avec attestation et rapport GRD obligatoires",
-                    "Réception / périodique compteur ouvert",
-                    "Revisite pour un même client",
-                    "Prévisite conseil + contrôle d’étanchéité des canalisations gaz",
-                    "Calcul dimensionnement des canalisations gaz"
-                  ],
-                price: [170, 140, 120, 100, 100]
-              },
-              {
-                control: "Bornes de recharge",
-                active: false,
-                choix:
-                  [
-                    "Réception / périodique",
-                    "Revisite pour un même client ",
-                    "Contrôle avec l’installation électrique du bâtiment / borne supplémentaire"
-                  ],
-                price: [130, 100, 65]
-              },
-              {
-                control: "PEB",
-                active: false,
-                typeBien:
-                  [
-                    {
-                      bien: "Appartement",
-                      chambres: [3, 4],
-                      price: [205, 140],
-                      active: false
-                    },
-                    {
-                      bien: "Maison",
-                      price: 290,
-                      active: false
-                    }
-                  ]
+                bien: "Maison",
+                price: 290,
+                active: false
               }
             ]
-        },
-        { type: "Non-domestique", active: false }
+        }
       ]
     },
     { type: "professionel", active: false }

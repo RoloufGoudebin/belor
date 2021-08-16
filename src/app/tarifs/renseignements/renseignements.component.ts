@@ -36,9 +36,23 @@ export class RenseignementsComponent implements OnInit {
         this.typeOfControls[j].active = false;
       }
     }
+    console.log(this.typeOfControls[i]);
   }
 
-  choseDomestique(i: number) {
+  ChoseElec(i: number) {
+    this.currentControl.name = this.typeOfControls[0].particulier[0].typeBien[i].choice;
+    // on met tous les autres types à false
+    console.log("prout");
+    for (let j = 0; j < this.typeOfControls[0].particulier[0].typeBien.length; j++) {
+      if (i != j) {
+        this.typeOfControls[0].particulier[0].typeBien[j].active = false;
+      }
+    }
+    this.currentControl.name = this.selectedOption;
+    console.log(this.currentControl.name)
+  }
+
+  choseControl(i: number) {
     this.typeOfControls[0].particulier[i].active = true;
     // on met tous les autres types à false
     for (let j = 0; j < this.typeOfControls[0].particulier.length; j++) {
@@ -46,41 +60,21 @@ export class RenseignementsComponent implements OnInit {
         this.typeOfControls[0].particulier[j].active = false;
       }
     }
-  }
-
-  ChoseElec(i: number) {
-    this.currentControl.name = this.typeOfControls[0].particulier[0].domestique[0].typeBien[i].choice;
-    // on met tous les autres types à false
-    console.log(this.currentControl.name);
-    for (let j = 0; j < this.typeOfControls[0].particulier[0].domestique[0].typeBien.length; j++) {
-      if (i != j) {
-        this.typeOfControls[0].particulier[0].domestique[0].typeBien[j].active = false;
-      }
-    }
-    this.currentControl.name = this.selectedOption;
-  }
-
-  choseControl(i: number) {
-    this.typeOfControls[0].particulier[0].domestique[i].active = true;
-    // on met tous les autres types à false
-    for (let j = 0; j < this.typeOfControls[0].particulier[0].domestique.length; j++) {
-      if (i != j) {
-        this.typeOfControls[0].particulier[0].domestique[j].active = false;
-      }
-    }
-    this.currentControl.name = this.typeOfControls[0].particulier[0].domestique[i].control;
+    this.currentControl.name = this.typeOfControls[0].particulier[i].control;
+    console.log(this.typeOfControls.name);
   }
 
   chosePEB(i: number) {
 
-    this.typeOfControls[0].particulier[0].domestique[4].typeBien[i].active = true;
+    this.typeOfControls[0].particulier[4].typeBien[i].active = true;
     // on met tous les autres types à false
-    for (let j = 0; j < this.typeOfControls[0].particulier[0].domestique[4].typeBien.length; j++) {
+    for (let j = 0; j < this.typeOfControls[0].particulier[4].typeBien.length; j++) {
       if (i != j) {
-        this.typeOfControls[0].particulier[0].domestique[4].typeBien[j].active = false;
+        this.typeOfControls[0].particulier[4].typeBien[j].active = false;
       }
     }
-    this.currentControl.name = this.typeOfControls[0].particulier[0].domestique[4].typeBien[i].bien.toLowerCase();
+    this.currentControl.name = this.typeOfControls[0].particulier[4].typeBien[i].bien.toLowerCase();
+    console.log(this.currentControl.name)
   }
 
 
@@ -96,29 +90,29 @@ export class RenseignementsComponent implements OnInit {
 
 
     // Controle électrique
-    if (this.typeOfControls[0].particulier[0].domestique[0].active) {
+    if (this.typeOfControls[0].particulier[0].active) {
       this.currentControl.name = this.selectedOption;
       this.currentControl.surface = this.currentControl.surface;
     }
 
     // Controle panneaux photovoltaïques
-    else if (this.typeOfControls[0].particulier[0].domestique[1].active){
+    else if (this.typeOfControls[0].particulier[1].active){
       this.currentControl.name = "contrôle panneaux photovoltaïques : " + this.selectedOption;
     }
 
     // Controle gaz
-    else if(this.typeOfControls[0].particulier[0].domestique[2].active){
+    else if(this.typeOfControls[0].particulier[2].active){
       this.currentControl.name = "Contrôle gaz : " + this.selectedOption;
 
     }
 
     // Controle bornes de recharge
-    else if(this.typeOfControls[0].particulier[0].domestique[3].active){
+    else if(this.typeOfControls[0].particulier[3].active){
       this.currentControl.name = "Contrôle bornes de recharge : " + this.selectedOption;
     }
 
     // PEB
-    else if (this.typeOfControls[0].particulier[0].domestique[4].active) {
+    else if (this.typeOfControls[0].particulier[4].active) {
       this.currentControl.nbrChambres = this.nbrChambres;
       this.currentControl.name = "Contrôle PEB " + this.currentControl.name + " de " + this.currentControl.nbrChambres + " chambre(s)";
     }
