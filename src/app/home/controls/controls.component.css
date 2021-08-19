@@ -8,7 +8,6 @@ h1 {
 
 h2{
 font-size: 1em;
-margin-bottom: 4em;
 
 }
 
@@ -18,4 +17,8 @@ p {
 
 img {
   max-width: 35%;
+}
+
+.transparent{
+  background-color: transparent !important;
 }

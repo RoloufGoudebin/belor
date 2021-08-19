@@ -1,25 +1,35 @@
 .fixed-top.scrolled {
     background-color: #fff !important;
     transition: background-color 200ms linear;
-}
- @media (max-width: 768px) {
-    .fixed-top{
-        background-color: #fff !important;
-    }
+    color: black !important;
 }
 
+@media (min-width: 992px){
 .nav-link{
     color: white !important;
     font-size: 1em;
 }
+}
 
-.nav-item{
-    padding-top: 45px;
-    padding-bottom: 45px;
-    padding-left: 15px;
-    padding-right: 15px;
-    outline: none;
-    cursor: pointer;
+
+
+
+@media (min-width: 992px) {
+    .nav-item{
+        padding-top: 45px;
+        padding-bottom: 45px;
+        padding-left: 15px;
+        padding-right: 15px;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav{
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 .nav-item:active{
@@ -39,9 +49,21 @@
     font-weight: 700;
 }
 
-.logo{
-    max-height: 85px;
-    margin-left: 2.5em;
+
+@media (max-width: 992px) {
+    .logo{
+        max-height: 85px;
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
+        margin-left: 1em;
+    }
+}
+
+@media (min-width: 992px){
+    .logo{
+        max-height: 85px;
+        margin-left: 2.5em;
+    }
 }
 
 .nav-colored {

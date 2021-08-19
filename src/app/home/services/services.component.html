@@ -5,55 +5,103 @@
     </div>
     <div class="col-5 mx-auto md-form input-group">
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Votre code postal" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <input type="text" class="form-control" placeholder="Votre code postal" aria-label="Recipient's username"
+          aria-describedby="button-addon2">
         <div class="input-group-append">
-          <button mdbBtn gradient="blue" rounded="true" size="md" class="m-0 px-5" type="button" id="button-addon2" mdbWavesEffect>GO</button>
+          <button mdbBtn gradient="blue" rounded="true" size="md" class="m-0 px-5" type="button" id="button-addon2"
+            mdbWavesEffect>GO</button>
         </div>
 
       </div>
     </div>
     <div class="col-12">
-      <h4 class="text-center text-white">Belor est accrédité par<img src="/assets/img/belac.jpg" class="belac"><a href="/assets/pdf/355-INSP-12 F-N.pdf" class="accreditation" target="_blank">certificat d'inspection n°355 - INSP</a></h4>
+      <h4 class="text-center text-white">Belor est accrédité par<img src="/assets/img/belac.jpg" class="belac"><a
+          href="/assets/pdf/355-INSP-12 F-N.pdf" class="accreditation" target="_blank">certificat d'inspection n°355 -
+          INSP</a></h4>
     </div>
   </div>
-  <div class="row col-8 mx-auto mt-5">
 
-
-
-        <!--Card-->
-        <mdb-card cascade="true" *ngFor="let card of cardsServices" narrower="true" class="col-3 mx-auto">
-
-          <!--Card image-->
-          <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-            <mdb-card-img src="{{card.img}}"></mdb-card-img>
-            <a>
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
-          <!--/Card image-->
-
-
-          <!--Button-->
-          <a mdbBtn floating="true" gradient="blue" class="btn-action ml-auto mr-4 mdb-color lighten-3 waves-light rotateHover" mdbWavesEffect>
-            <mdb-icon fas icon="chevron-right" class="pl-1 waves-light" mdbWavesEffect>
-            </mdb-icon>
+  <!--Cards pour écran lg-->
+  <div class="row col-lg-12 col-xl-11 mx-auto mt-5 d-none d-lg-block">
+    <div class="row">
+      <mdb-card cascade="true" *ngFor="let card of cardsServices" narrower="true" class="col-3 mx-auto">
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+          <mdb-card-img src="{{card.img}}"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
           </a>
+        </div>
+        <!--/Card image-->
 
 
-          <mdb-card-body cascade="true" class="text-center pb-0 px-0">
-            <!--Title-->
-            <h3 class="card-title bleu">{{card.title}}</h3>
-            <hr class="text-light">
-            <!--Text-->
+        <!--Button-->
+        <a mdbBtn floating="true" gradient="blue"
+          class="btn-action ml-auto mr-4 mdb-color lighten-3 waves-light rotateHover" mdbWavesEffect>
+          <mdb-icon fas icon="chevron-right" class="pl-1 waves-light" mdbWavesEffect>
+          </mdb-icon>
+        </a>
 
-            <mdb-card-text>
+
+        <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+          <!--Title-->
+          <h3 class="card-title bleu">{{card.title}}</h3>
+          <hr class="text-light">
+          <!--Text-->
+
+          <mdb-card-text>
             <p class="font-small mb-0">{{card.body}}</p>
-            </mdb-card-text>
+          </mdb-card-text>
 
 
 
-          </mdb-card-body>
-          <!--/.Card content-->
+        </mdb-card-body>
+        <!--/.Card content-->
 
-        </mdb-card>
-        <!--/.Card-->
+      </mdb-card>
+      <!--/.Card-->
+    </div>
+  </div>
+
+  <mdb-carousel [animation]="'slide'" class="col-12 mx-auto d-lg-none " [interval]="'0'">
+    <mdb-carousel-item *ngFor="let card of cardsServices" narrower="true">
+      <mdb-card class="col-9 mx-auto">
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+          <mdb-card-img src="{{card.img}}"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--/Card image-->
+
+
+        <!--Button-->
+        <a mdbBtn floating="true" gradient="blue"
+          class="btn-action ml-auto mr-4 mdb-color lighten-3 waves-light rotateHover" mdbWavesEffect>
+          <mdb-icon fas icon="chevron-right" class="pl-1 waves-light" mdbWavesEffect>
+          </mdb-icon>
+        </a>
+
+
+        <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+          <!--Title-->
+          <h3 class="card-title bleu">{{card.title}}</h3>
+          <hr class="text-light">
+          <!--Text-->
+
+          <mdb-card-text>
+            <p class="font-small mb-0">{{card.body}}</p>
+          </mdb-card-text>
+
+
+
+        </mdb-card-body>
+        <!--/.Card content-->
+
+      </mdb-card>
+      <!--/.Card-->
+    </mdb-carousel-item>
+  </mdb-carousel>
+
+</section>

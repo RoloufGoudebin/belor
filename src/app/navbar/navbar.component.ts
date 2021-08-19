@@ -30,6 +30,7 @@ export class NavbarComponent implements OnInit {
   isNavbarCollapsed = true;
 
   ngOnInit(): void {
+    console.log(this.isNavbarCollapsed);
   }
 
 }
