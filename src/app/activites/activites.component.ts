@@ -37,6 +37,7 @@ export class ActivitesComponent implements OnInit, AfterViewInit {
     else if (route=="/activites#coordination"){
       this.staticTabs.setActiveTab(3);
     }
+    window.scroll(0,0);
   }
 
 }
