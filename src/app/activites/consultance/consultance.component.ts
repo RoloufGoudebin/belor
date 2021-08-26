@@ -76,6 +76,7 @@ export class ConsultanceComponent implements OnInit {
   }
   ngOnInit() {
     this.slides = this.chunk(this.cards, 3);
+    
   }
 
 }

@@ -24,7 +24,7 @@
   <!--Cards pour écran lg-->
   <div class="row col-lg-12 col-xl-11 mx-auto mt-5 d-none d-lg-block">
     <div class="row">
-      <mdb-card cascade="true" *ngFor="let card of cardsServices" narrower="true" class="col-3 mx-auto">
+      <mdb-card cascade="true" *ngFor="let card of cardsServices" narrower="true" class="col-3 mx-auto" (click)="scroll('', card.link)">
         <!--Card image-->
         <div class="view view-cascade overlay waves-light" mdbWavesEffect>
           <mdb-card-img src="{{card.img}}"></mdb-card-img>

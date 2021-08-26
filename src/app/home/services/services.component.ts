@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-services',
@@ -15,26 +17,26 @@ export class ServicesComponent implements OnInit {
       img: "/assets/img/boitier.jpg",
       title: "Contrôle",
       body: "Nos inspecteurs sont qualifiés pour contrôler vos installations domestiques et industrielles",
-      link: ""
+      link: "controle"
     },
     {
       img:  "/assets/img/coordination.jpg",
       title: "Consultance",
       body: "Bureau de contrôle pour le suivi des chantiers de génie civil. Assistance à la mise en conformité des équipements de travail",
-      link: ""
+      link: "consultance"
     },
     { img: "/assets/img/security.jpg",
       title: "Coordination",
       body: "Belor effectue des missions de coordination sécurité et santé, des missions de coordination de chantier et des missions d'animateur de sécurité",
-      link: ""
+      link: "coordination"
     }
   ];
-  constructor() { }
-
-  scroll(el: HTMLElement) {
-    el.scrollIntoView();
-  }
+  constructor(private router: Router, private scroller: ViewportScroller,) { }
 
   ngOnInit(): void {
+  }
+
+  scroll(page: string, anchor: string) {
+    this.router.navigate(["/" + page], { fragment: anchor });
   }
 }
