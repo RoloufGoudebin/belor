@@ -5,10 +5,19 @@
     <div class="container-lg container-fluid d-none d-md-block">
         <div class="row col-12 mx-auto bleu">
 
-            <div *ngFor="let feature of controlsFeatures" class="col-9 col-md-5 col-lg-4 mx-auto">
-                <img src='{{feature.img}}' class="img-fluid" alt="Service Belor, organisme de contrôle">
-                <h5 class=" font-weight-bold mt-3">{{feature.title}}</h5>
-                <p class="text-justify">{{feature.body}}</p>
+            <div *ngFor="let feature of controlsFeatures" class="col-9 col-md-5 col-lg-4 mx-auto pb-3">
+                <div class="box rounded py-3 zoom">
+                    <div class="ribbon"><span>DÈS 100€</span></div>
+
+                    <img src='{{feature.img}}' class="img-fluid" alt="Service Belor, organisme de contrôle">
+                    <h5 class=" font-weight-bold mt-3">{{feature.title}}</h5>
+
+                    <div class="mr-auto">
+                        <button type="button" mdbBtn gradient="blue" rounded="true"
+                            data-wow-delay="1s">Réservez en ligne<i class="ml-2 fas fa-caret-right"></i></button>
+                    </div>
+
+                </div>
             </div>
 
         </div>
@@ -17,7 +26,9 @@
 
     <div class="transparent col-9 mx-auto d-md-none">
         <mdb-accordion [multiple]="false" aria-multiselectable="true" class="col-9 mx-auto pt-0 mt-0">
-            <mdb-accordion-item [collapsed]="true" *ngFor="let feature of controlsFeatures" [customClass]="'bg-transparent border-0'" class="pt-0 mt-0"  [indicator]="false" (onclick)="isCollapse = !isCollapse">
+            <mdb-accordion-item [collapsed]="true" *ngFor="let feature of controlsFeatures"
+                [customClass]="'bg-transparent border-0'" class="pt-0 mt-0" [indicator]="false"
+                (onclick)="isCollapse = !isCollapse">
                 <mdb-accordion-item-head>
                     <img src='{{feature.img}}' class="img-fluid" alt="Service Belor, organisme de contrôle">
                     <h5 class=" font-weight-bold mt-3">{{feature.title}}</h5>
