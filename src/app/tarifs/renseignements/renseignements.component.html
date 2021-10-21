@@ -3,14 +3,14 @@
     <div class="row">
         <h2>Je suis : </h2>
         <button *ngFor="let typeOfClient of typeOfControls; let i = index;" (click)="choseClient(i)" mdbBtn
-            type="button" outline="true" class="col-3 mr-3 border"
-            [ngClass]="{'border-success': typeOfControls[i].active}" mdbWavesEffect>{{typeOfControls[i].type}}</button>
+            type="button" outline="true" class="col-3 mr-4 border"
+            [ngClass]="{'border-success': typeOfControls[i].active}" mdbWavesEffect class="word-wrap:normal;">{{typeOfControls[i].type}}</button>
     </div>
 
-    <!--Professionels-->
+    <!--Professionnels-->
     <div class="row" *ngIf="typeOfControls[1].active">
-        <button (click)="submitPro(1)" mdbBtn type="button" outline="true" color="success" class="col-4 mt-5"
-            mdbWavesEffect>Renseignez vos coordonnées >></button>
+        <button (click)="submitPro(1)" mdbBtn type="button" outline="true" color="success" class="col-4 mt-5 mx-auto"
+            mdbWavesEffect class="word-wrap:normal;">Renseignez vos coordonnées >></button>
     </div>
 
     <!--Particuliers-->
@@ -22,7 +22,7 @@
                 <button *ngFor="let typeOfControl of typeOfControls[0].particulier; let i = index;"
                     (click)="choseControl(i)" mdbBtn type="button" outline="true" class="col-3 mr-3 border"
                     [ngClass]="{'border-success': typeOfControl.active}"
-                    mdbWavesEffect>{{typeOfControl.control}}</button>
+                    mdbWavesEffect class="word-wrap:normal;">{{typeOfControl.control}}</button>
 
                 <!--Électrique-->
                 <div class="row" *ngIf="typeOfControls[0].particulier[0].active">
@@ -91,7 +91,7 @@
                 <!--Bouton validation-->
                 <div class="row" *ngFor="let choice of typeOfControls[0].particulier; let i = index;">
                     <button *ngIf="choice.active" (click)="submit(i)" mdbBtn type="button" outline="true"
-                        color="success" class="col-4 mt-5" mdbWavesEffect>Évaluez le prix >></button>
+                        color="success" class="col-4 mt-5" mdbWavesEffect class="word-wrap:normal;">Évaluez le prix >></button>
                 </div>
 
             </div>

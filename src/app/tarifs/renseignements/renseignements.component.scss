@@ -1,13 +1,13 @@
 .selected{
-    border-color: #3a51a1 !important;
+    border-color: #3aa150 !important;
 }
 
 button {
-    font-size: 0.9em !important;
+    font-size: 0.6em !important;
     border-radius: 30px !important;
     background-color: white !important;
-    border-width: 0.3em !important;
-    height: 5.5em !important
+    border-width: 0.2em !important;
+    height: 4em !important
 }
 
 button.selected{
@@ -16,5 +16,7 @@ button.selected{
 }
 
 h2{
-    font-size: 1.8em !important;
+    font-size: 1em !important;
+    color:black;
+    font-weight: 400;
 }
