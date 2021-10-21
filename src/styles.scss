@@ -71,12 +71,6 @@ button {
 }
 
 
-/*belor couleur*/
-.rouge {
-  text-decoration: underline;
-  text-decoration-color: #CE1B3C;
-}
-
 .bleu {
   color: #000076;
 }
@@ -97,9 +91,7 @@ select:-webkit-autofill:focus {
 
 .bg-svg {
   background-image: url(/assets/svg/bg.svg) !important;
-  background-attachment: fixed !important;
   background-repeat: no-repeat;
-  background-position: 80% 10%;
   background-size: cover;
 }
 
