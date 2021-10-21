@@ -4,33 +4,14 @@
     <!--Bureau de contrôles pour le suivi des chantiers génie civil-->
     <mdb-tab heading="Bureau de contrôle pour le suivi des chantiers génie civil">
         <h3 class="bleu rouge">Bureau de contrôle pour le suivi des chantiers génie civil</h3>
-        <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
-        </p>
-        <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
-        </p>
-
+        
         <h4>Références</h4>
         <mdb-carousel [isControls]="true" [interval]="'0'" [animation]="'slide'">
             <mdb-carousel-item *ngFor="let item of slides; let i = index">
                 <div class="col-md-4" *ngFor="let card of item; let cardIndex = index">
                     <mdb-card class="my-1">
                         <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
-                        <mdb-card-body>
-                            <mdb-card-title>
-                                <h4>{{card.title}}</h4>
-                            </mdb-card-title>
-                            <p>{{card.description}}</p>
-                        </mdb-card-body>
+                        
                     </mdb-card>
                 </div>
             </mdb-carousel-item>
