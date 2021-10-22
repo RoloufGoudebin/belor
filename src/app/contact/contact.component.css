@@ -1,5 +1,13 @@
 h2 {
-  margin-top: 6em !important;
+  color: white ;
+  font-style: italic;
+  font-size: 1.2em !important;
+}
+
+h1{
+  margin-top: 5em !important;
+  color: #07097B
+  ;
 }
 
 .adresses{
@@ -7,3 +15,7 @@ h2 {
   margin-right: 0.8em;
   margin-left: 0.8em;
 }
+
+
+
+
