@@ -10,7 +10,7 @@ export class TarifsComponent implements OnInit {
   steps = [
     { type: "Renseignements", valid: false },
     { type: "Coordonnées", valid: false },
-    { type: "Vos disponibilités", valid: false }
+    { type: "Validation", valid: false }
   ]
 
   currentControl = {
