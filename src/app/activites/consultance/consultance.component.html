@@ -1,28 +1,6 @@
 <mdb-tabset #staticTabs [vertical]="true" [buttonClass]="'md-tabs tabs-3 indigo darken-4'" [contentClass]="'card'">
 
 
-    <!--Bureau de contrôles pour le suivi des chantiers génie civil-->
-    <mdb-tab heading="Bureau de contrôle pour le suivi des chantiers génie civil">
-        <h3 class="bleu rouge">Bureau de contrôle pour le suivi des chantiers génie civil</h3>
-        
-        <h4>Références</h4>
-        <mdb-carousel [isControls]="true" [interval]="'0'" [animation]="'slide'">
-            <mdb-carousel-item *ngFor="let item of slides; let i = index">
-                <div class="col-md-4" *ngFor="let card of item; let cardIndex = index">
-                    <mdb-card class="my-1">
-                        <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
-                        <mdb-card-body>
-                            <mdb-card-title>
-                                <h4>{{card.title}}</h4>
-                            </mdb-card-title>
-                            <p>{{card.description}}</p>
-                        </mdb-card-body>
-                    </mdb-card>
-                </div>
-            </mdb-carousel-item>
-        </mdb-carousel>
-
-    </mdb-tab>
 
     <!--Conformité des équipements-->
     <mdb-tab heading="Assistance à la mise en conformité des équipements de travail">

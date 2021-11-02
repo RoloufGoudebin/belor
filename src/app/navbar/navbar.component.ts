@@ -21,7 +21,6 @@ export class NavbarComponent implements OnInit {
     },
     { title: "Formations", link: "/formations", dropdown: false },
     { title: "Liens", link: "/liens", dropdown: false },
-    { title: "Blog", link: "/blog", dropdown: false },
     { title: "Contact", link: "/contact", dropdown: false }
   ]
 
