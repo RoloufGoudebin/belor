@@ -5,14 +5,10 @@
     </div>
     <div class="col-5 mx-auto md-form input-group">
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Votre code postal" aria-label="Recipient's username"
-          aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button mdbBtn gradient="blue" rounded="true" size="md" class="m-0 px-5" type="button" id="button-addon2"
-            mdbWavesEffect>GO</button>
-        </div>
-
+        <button mdbBtn gradient="blue" rounded="true" size="md" class="m-0 px-5 mx-auto" type="button"
+          id="button-addon2" mdbWavesEffect>GO</button>
       </div>
+
     </div>
     <div class="col-12">
       <h4 class="text-center text-white">Belor est accrédité par<img src="/assets/img/belac.jpg" class="belac"><a
@@ -24,7 +20,8 @@
   <!--Cards pour écran lg-->
   <div class="row col-lg-12 col-xl-11 mx-auto mt-5 d-none d-lg-block">
     <div class="row">
-      <mdb-card cascade="true" *ngFor="let card of cardsServices" narrower="true" class="col-3 mx-auto" (click)="scroll('', card.link)">
+      <mdb-card cascade="true" *ngFor="let card of cardsServices" narrower="true" class="col-3 mx-auto"
+        (click)="scroll('', card.link)">
         <!--Card image-->
         <div class="view view-cascade overlay waves-light" mdbWavesEffect>
           <mdb-card-img src="{{card.img}}"></mdb-card-img>

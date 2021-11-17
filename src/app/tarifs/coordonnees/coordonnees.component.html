@@ -31,7 +31,8 @@
                 <input type="email" formControlName="contactFormEmail" id="materialContactFormEmail"
                     class="form-control" mdbInput mdbValidate />
                 <label for="materialContactFormEmail" class="col">E-mail</label>
-                <mdb-error *ngIf="email.invalid && (email.dirty || email.touched)" class="col">E-mail non valide</mdb-error>
+                <mdb-error *ngIf="email.invalid && (email.dirty || email.touched)" class="col">E-mail non valide
+                </mdb-error>
                 <mdb-success *ngIf="email.valid && (email.dirty || email.touched)" class="col"></mdb-success>
             </div>
         </div>
@@ -42,7 +43,8 @@
                 <input type="tel" formControlName="contactFormPhone" id="materialContactFormPhone" class="form-control"
                     mdbInput mdbValidate />
                 <label for="materialContactFormPhone" class="col">Numéro de téléphone</label>
-                <mdb-error *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="col">Numéro de téléphone non valide
+                <mdb-error *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="col">Numéro de téléphone non
+                    valide
                 </mdb-error>
                 <mdb-success *ngIf="phone.valid && (phone.dirty || phone.touched)" class="col"></mdb-success>
             </div>
@@ -62,14 +64,13 @@
             </div>
             <!--Boîte-->
             <div class="md-form col-2">
-                <input type="text" id="materialContactFormBox"
-                    class="form-control" mdbInput/>
+                <input type="text" id="materialContactFormBox" class="form-control" mdbInput />
                 <label for="materialContactFormBox" class="col">Boite</label>
             </div>
             <!--Ville-->
             <div class="md-form col-8">
-                <input type="text" formControlName="contactFormCity" id="materialContactFormCity"
-                    class="form-control" mdbInput mdbValidate />
+                <input type="text" formControlName="contactFormCity" id="materialContactFormCity" class="form-control"
+                    mdbInput mdbValidate />
                 <label for="materialContactFormCity" class="col">Ville</label>
                 <mdb-error *ngIf="city.invalid && (city.dirty || city.touched)" class="col">Veuillez remplir ce
                     champ
@@ -78,8 +79,8 @@
             </div>
             <!--Code Postal-->
             <div class="md-form col-4">
-                <input type="text" formControlName="contactFormZip" id="materialContactFormZip"
-                    class="form-control" mdbInput mdbValidate />
+                <input type="text" formControlName="contactFormZip" id="materialContactFormZip" class="form-control"
+                    mdbInput mdbValidate />
                 <label for="materialContactFormZip" class="col">Code Postal</label>
                 <mdb-error *ngIf="zip.invalid && (zip.dirty || zip.touched)" class="col">Code postal non valide
                 </mdb-error>
@@ -94,8 +95,13 @@
         </button>
     </form>
 
-    <div class="ml-auto col-5 white rounded">
-        <h3>Récapitulatif de votre demande</h3>
-        <p>{{currentControl.name}}</p>
+    <div class="ml-auto col-5 rounded recap">
+        <div class="white py-2 px-3 rounded">
+            <h3>Récapitulatif de votre demande :</h3>
+            <hr>
+            <p>{{currentControl.name}}</p>
+            <hr>
+            <p>Tarif estimé : </p>
+        </div>
     </div>
 </div>
