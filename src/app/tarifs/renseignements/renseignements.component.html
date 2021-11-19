@@ -16,7 +16,7 @@
         <!--Professionnels-->
         <div class="row mt-5" *ngIf="typeOfControls[1].active">
             <button (click)="submitPro(1)" mdbBtn type="button"  rounded="true" color="info"
-                class="col-4 mt-5 mx-auto" mdbWavesEffect class="word-wrap:normal;">Renseignez vos coordonnées ></button>
+                class="col-4 mt-5 mx-auto" mdbWavesEffect class="word-wrap:normal;">Renseignez vos coordonnées  ></button>
         </div>
 
         <!--Particuliers-->
@@ -92,7 +92,7 @@
         <!--Bouton validation-->
         <div class="row mt-3" *ngFor="let choice of typeOfControls[0].particulier; let i = index;">
             <button *ngIf="choice.active" (click)="submit(i)" mdbBtn type="button" rounded="true" color="info"
-                class="col-4 mt-5" mdbWavesEffect class="word-wrap:normal;">Évaluez le prix ></button>
+                class="col-4 mt-5" mdbWavesEffect class="word-wrap:normal;">Évaluez le prix  ></button>
         </div>
 
     </div>
