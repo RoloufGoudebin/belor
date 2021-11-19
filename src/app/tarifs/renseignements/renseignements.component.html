@@ -1,29 +1,28 @@
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid formulaire">
     <div class="container-fluid ml-5">
 
 
         <!--Type de clients-->
         <div class="row">
-            <h2>Je suis :</h2>
+            <h2 class="white-text">Je suis un :</h2>
         </div>
         <div class="row">
             <button *ngFor="let typeOfClient of typeOfControls; let i = index;" (click)="choseClient(i)" mdbBtn
-                type="button" outline="true" class="col-3 border"
+                type="button" outline="true" rounded="true" class="col-3 border"
                 [ngClass]="{'border-success': typeOfControls[i].active}"
                 mdbWavesEffect>{{typeOfControls[i].type}}</button>
         </div>
 
         <!--Professionnels-->
         <div class="row mt-5" *ngIf="typeOfControls[1].active">
-            <button (click)="submitPro(1)" mdbBtn type="button" outline="true" color="success"
-                class="col-4 mt-5 mx-auto" mdbWavesEffect class="word-wrap:normal;">Renseignez vos coordonnées
-                >></button>
+            <button (click)="submitPro(1)" mdbBtn type="button"  rounded="true" color="info"
+                class="col-4 mt-5 mx-auto" mdbWavesEffect class="word-wrap:normal;">Renseignez vos coordonnées ></button>
         </div>
 
         <!--Particuliers-->
         <!--Types de contrôles-->
         <div class="row mt-3" *ngIf="typeOfControls[0].active">
-            <h2>Type de contrôle :</h2>
+            <h2 class="white-text">Type de contrôle :</h2>
         </div>
         <div class="row" *ngIf="typeOfControls[0].active">
             <button *ngFor="let typeOfControl of typeOfControls[0].particulier; let i = index;"
@@ -33,14 +32,14 @@
 
         <!--Électrique-->
         <div class="row mt-3" *ngIf="typeOfControls[0].particulier[0].active">
-            <h2>Faites votre choix :</h2>
+            <h2 class="white-text">Faites votre choix :</h2>
             <select class="browser-default custom-select col-10" [(ngModel)]="selectedOption" name="selectedOption">
                 <option *ngFor="let option of typeOfControls[0].particulier[0].choix; let i = index;" [value]="option">
                     {{ option }}</option>
             </select>
             <div class="md-form">
                 <input mdbInput type="text" id="form1" class="form-control">
-                <label for="form1" class="">Surface du bien (m²)</label>
+                <label for="form1" class="white-text">Surface du bien (m²)</label>
             </div>
         </div>
 
@@ -48,7 +47,7 @@
 
         <!--Panneaux photovoltaïques-->
         <div class="row mt-3" *ngIf="typeOfControls[0].particulier[1].active">
-            <h2>Faites votre choix :</h2>
+            <h2 class="white-text">Faites votre choix :</h2>
             <select class="browser-default custom-select col-10" [(ngModel)]="selectedOption" name="selectedOption">
                 <option *ngFor="let option of typeOfControls[0].particulier[1].choix; let i = index;" [value]="option">
                     {{ option }}</option>
@@ -57,7 +56,7 @@
 
         <!--Gaz-->
         <div class="row mt-3" *ngIf="typeOfControls[0].particulier[2].active">
-            <h2>Faites votre choix :</h2>
+            <h2 class="white-text">Faites votre choix :</h2>
             <select class="browser-default custom-select col-10" [(ngModel)]="selectedOption" name="selectedOption">
                 <option *ngFor="let option of typeOfControls[0].particulier[2].choix; let i = index;" [value]="option">
                     {{ option }}</option>
@@ -66,7 +65,7 @@
 
         <!--Bornes de recharge-->
         <div class="row mt-3" *ngIf="typeOfControls[0].particulier[3].active">
-            <h2>Faites votre choix :</h2>
+            <h2 class="white-text">Faites votre choix :</h2>
             <select class="browser-default custom-select col-10" [(ngModel)]="selectedOption" name="selectedOption">
                 <option *ngFor="let option of typeOfControls[0].particulier[3].choix; let i = index;" [value]="option">
                     {{ option }}</option>
@@ -75,7 +74,7 @@
 
         <!--PEB-->
         <div class="row mt-3" *ngIf="typeOfControls[0].particulier[4].active">
-            <h2>Habitation</h2>
+            <h2 class="white-text">Habitation</h2>
         </div>
         <div class="row" *ngIf="typeOfControls[0].particulier[4].active">
             <button *ngFor="let typeBien of typeOfControls[0].particulier[4].typeBien; let i = index;"
@@ -86,14 +85,14 @@
             <div class="md-form">
                 <input mdbInput type="text" class="form-control" id="nbrChambres" name="nbrChambres"
                     [(ngModel)]="nbrChambres">
-                <label for="nbrChambres" class="">Nombre de chambres</label>
+                <label for="nbrChambres" class="white-text">Nombre de chambres</label>
             </div>
         </div>
 
         <!--Bouton validation-->
         <div class="row mt-3" *ngFor="let choice of typeOfControls[0].particulier; let i = index;">
-            <button *ngIf="choice.active" (click)="submit(i)" mdbBtn type="button" outline="true" color="success"
-                class="col-4 mt-5" mdbWavesEffect class="word-wrap:normal;">Évaluez le prix>></button>
+            <button *ngIf="choice.active" (click)="submit(i)" mdbBtn type="button" rounded="true" color="info"
+                class="col-4 mt-5" mdbWavesEffect class="word-wrap:normal;">Évaluez le prix ></button>
         </div>
 
     </div>

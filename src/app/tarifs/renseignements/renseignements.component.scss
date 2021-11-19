@@ -5,7 +5,13 @@
 button {
     font-size: 0.8em !important;
     border-width: 0.2em !important;
-    height: 4em !important
+    height: 4em !important;
+    color: white;
+}
+
+button:hover { 
+    color: #b8d3f1!important;
+    border-color: #b8d3f1 !important;
 }
 
 button.selected{
@@ -18,3 +24,10 @@ h2{
     color:black;
     font-weight: 400;
 }
+
+.formulaire{
+    border-radius: 25px;
+    background-color: rgba(47, 48, 48, 0.250 ) !important;
+}
+
+
