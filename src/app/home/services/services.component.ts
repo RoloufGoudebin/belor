@@ -14,7 +14,7 @@ export class ServicesComponent implements OnInit {
   //cards of services
   cardsServices = [
     {
-      img: "/assets/img/boitier.jpg",
+      img: "/assets/img/boitierjpg.jpg",
       title: "Contrôle",
       body: "Nos inspecteurs sont qualifiés pour contrôler vos installations domestiques et industrielles",
       link: "controle"
