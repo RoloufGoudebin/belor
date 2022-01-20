@@ -65,8 +65,8 @@ export class TarifsComponent implements OnInit {
           choix:
             [
               "Réception/périodique pour un onduleur ˂ 10 kVA",
-              "Revisite pour un même client ",
-              "Contrôle avec l’installation électrique du bâtiment / onduleur supplémentaire "
+              "Revisite pour un même client",
+              "Contrôle avec l’installation électrique du bâtiment / onduleur supplémentaire"
             ],
           price: [130, 100, 70]
         },
@@ -101,8 +101,8 @@ export class TarifsComponent implements OnInit {
             [
               {
                 bien: "Appartement",
-                chambres: [3, 4],
-                price: [205, 240],
+                chambres: [3],
+                price: [205],
                 active: false
               },
               {

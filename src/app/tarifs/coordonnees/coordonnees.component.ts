@@ -1,6 +1,6 @@
 import { ConnectionService } from '../../connection.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Component, OnInit, HostListener, Input } from '@angular/core';
+import { Component, OnInit, HostListener, Input, EventEmitter, Output } from '@angular/core';
 
 
 @Component({
@@ -16,6 +16,7 @@ export class CoordonneesComponent implements OnInit {
   optionsSelect: Array<any>;
 
   @Input() currentControl;
+  @Output() onSubmit = new EventEmitter<any>();
 
   @HostListener('input') oninput() {
 
@@ -63,7 +64,8 @@ export class CoordonneesComponent implements OnInit {
     return this.contactForm.get('contactFormZip');
   }
 
-  onSubmit() {
+  submit(i: number) {
+    this.onSubmit.emit(i);
     this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {
       alert('Your message has been sent.');
       this.contactForm.reset();

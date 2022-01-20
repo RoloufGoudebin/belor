@@ -24,7 +24,7 @@
     <div class="container">
         <app-renseignements (onSubmit)="nextStep(currentStep)" [currentControl]="currentControl" [typeOfControls]="typeOfControls" *ngIf="currentStep==0"></app-renseignements>
         <app-coordonnees (onSubmit)="nextStep(currentStep)" [currentControl]="currentControl" *ngIf="currentStep==1"></app-coordonnees>
-        <app-disponibilites *ngIf="currentStep==2"></app-disponibilites>
+        <app-disponibilites (onSubmit)="nextStep(currentStep)" [currentControl]="currentControl" *ngIf="currentStep==2"></app-disponibilites>
     </div>
 
 

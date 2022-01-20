@@ -1,7 +1,7 @@
 <div class="row">
 
     <!--Formulaire-->
-    <form class="col-6 white rounded mb-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <form class="col-6 white rounded mb-5" [formGroup]="contactForm" (ngSubmit)="submit()">
 
         <!--Nom et prénom -->
         <div class="row">
@@ -90,7 +90,7 @@
         </div>
 
         <button mdbBtn color="info" outline="true" rounded="true" block="true" class="z-depth-0 my-4 waves-effect"
-            mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">
+            mdbWavesEffect type="submit(1)" [disabled]="disabledSubmitButton">
             Send
         </button>
     </form>
@@ -101,7 +101,7 @@
             <hr>
             <p>{{currentControl.name}}</p>
             <hr>
-            <p>Tarif estimé : </p>
+            <p>Tarif estimé : {{this.currentControl.price}} euros </p>
         </div>
     </div>
 </div>

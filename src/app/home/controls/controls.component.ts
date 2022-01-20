@@ -13,12 +13,12 @@ export class ControlsComponent implements OnInit {
     {
       img : "assets/img/house.png",
       title: "Certificat PEB",
-      body: "Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas excommuni. At nos hinc posthac, sitientis piros Afros."
+      price: "DÈS 205€"
     },
     {
       img : "assets/img/plug.png",
       title: "Installation électrique",
-      body: "Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas excommuni. At nos hinc posthac, sitientis piros Afros."
+      price: "",
     },
     {
       img : "assets/img/solar.png",
