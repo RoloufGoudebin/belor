@@ -18,7 +18,7 @@ export class RenseignementsComponent implements OnInit {
 
   nbrChambres: number;
   surface: number;
-  selectedOption: string;
+  selectedOption;
 
   @Output() onSubmit = new EventEmitter<any>();
   @Output() refreshTypeOfControls = new EventEmitter<any>();

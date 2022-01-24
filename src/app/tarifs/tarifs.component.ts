@@ -132,7 +132,9 @@ export class TarifsComponent implements OnInit {
   }
 
   changeCurrentStep(i: number) {
-    this.currentStep = i;
+    if (this.currentStep >= i){
+      this.currentStep = i;
+    }
   }
 
   validatedBefore(i: number) {

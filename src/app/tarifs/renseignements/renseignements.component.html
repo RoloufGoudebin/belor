@@ -91,7 +91,7 @@
                 [ngClass]="{'border-success': typeBien.active}" mdbWavesEffect>{{typeBien.bien}}</button>
         </div>
         <div class="row" *ngIf="typeOfControls[0].particulier[4].active">
-            <div class="md-form">
+            <div class="md-form col-3">
                 <input mdbInput type="text" class="form-control" id="nbrChambres" name="nbrChambres"
                     [(ngModel)]="nbrChambres">
                 <label for="nbrChambres" class="white-text">Nombre de chambres</label>
