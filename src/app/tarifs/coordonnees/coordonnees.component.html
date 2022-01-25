@@ -1,7 +1,12 @@
 <div class="row">
 
+<<<<<<< Updated upstream
     <!--Formulaire-->
     <form class="col-12 col-md-6 white rounded mb-5 order-2 order-md-1" [formGroup]="contactForm" (ngSubmit)="submit(1)">
+=======
+    <!--Formulaire mooooobiiile-->
+    <form class="col-12 mb-5 d-lg-none formulaire" [formGroup]="contactForm" (ngSubmit)="submit(1)">
+>>>>>>> Stashed changes
 
         <!--Nom et prénom -->
         <div class="row">
@@ -95,13 +100,124 @@
         </button>
     </form>
 
+<<<<<<< Updated upstream
     <div class="ml-md-auto col-md-5 col-12 rounded recap mb-5 mb-md-0 order-1 order-md-2">
         <div class="white py-2 px-3 rounded">
             <h3>Récapitulatif de votre demande :</h3>
-            <hr>
-            <p>{{currentControl.name}}</p>
-            <hr>
-            <p>Tarif estimé : {{this.currentControl.price}} euros </p>
+=======
+     <!--Formulaire-->
+     <form class="col-6 formulaire mb-5 d-none d-lg-block" [formGroup]="contactForm" (ngSubmit)="submit(1)">
+
+        <!--Nom et prénom -->
+        <div class="row">
+            <div class="md-form mt-3 col-6">
+                <input type="text" formControlName="contactFormLastName" id="materialContactFormLastName"
+                    class="form-control" mdbInput mdbValidate />
+                <label for="materialContactFormLastName" class="col">Nom</label>
+                <mdb-error *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="col">Veuillez remplir
+                    ce champ
+                </mdb-error>
+                <mdb-success *ngIf="lastName.valid && (lastName.dirty || lastName.touched)"></mdb-success>
+            </div>
+
+            <div class="md-form mt-3 col-6">
+                <input type="text" formControlName="contactFormFirstName" id="materialContactFormFirstName"
+                    class="form-control" mdbInput mdbValidate />
+                <label for="materialContactFormFirstName" class="col">Prénom</label>
+                <mdb-error *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">Veuillez remplir ce champ
+                </mdb-error>
+                <mdb-success *ngIf="firstName.valid && (firstName.dirty || firstName.touched)"></mdb-success>
+            </div>
         </div>
+
+        <!--E-mail-->
+        <div class="row">
+            <div class="md-form col-6">
+                <input type="email" formControlName="contactFormEmail" id="materialContactFormEmail"
+                    class="form-control" mdbInput mdbValidate />
+                <label for="materialContactFormEmail" class="col">E-mail</label>
+                <mdb-error *ngIf="email.invalid && (email.dirty || email.touched)" class="col">E-mail non valide
+                </mdb-error>
+                <mdb-success *ngIf="email.valid && (email.dirty || email.touched)" class="col"></mdb-success>
+            </div>
+        </div>
+
+        <!--Numéro de téléphone-->
+        <div class="row">
+            <div class="md-form col-6">
+                <input type="tel" formControlName="contactFormPhone" id="materialContactFormPhone" class="form-control"
+                    mdbInput mdbValidate />
+                <label for="materialContactFormPhone" class="col">Numéro de téléphone</label>
+                <mdb-error *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="col">Numéro de téléphone non
+                    valide
+                </mdb-error>
+                <mdb-success *ngIf="phone.valid && (phone.dirty || phone.touched)" class="col"></mdb-success>
+            </div>
+        </div>
+
+        <!--Adresse-->
+        <div class="row">
+            <!--Rue-->
+            <div class="md-form col-10">
+                <input type="text" formControlName="contactFormStreet" id="materialContactFormStreet"
+                    class="form-control" mdbInput mdbValidate />
+                <label for="materialContactFormStreet" class="col">Rue + numéro</label>
+                <mdb-error *ngIf="street.invalid && (street.dirty || street.touched)" class="col">Veuillez remplir ce
+                    champ
+                </mdb-error>
+                <mdb-success *ngIf="street.valid && (street.dirty || street.touched)"></mdb-success>
+            </div>
+            <!--Boîte-->
+            <div class="md-form col-2">
+                <input type="text" id="materialContactFormBox" class="form-control" mdbInput />
+                <label for="materialContactFormBox" class="col">Boite</label>
+            </div>
+            <!--Ville-->
+            <div class="md-form col-8">
+                <input type="text" formControlName="contactFormCity" id="materialContactFormCity" class="form-control"
+                    mdbInput mdbValidate />
+                <label for="materialContactFormCity" class="col">Ville</label>
+                <mdb-error *ngIf="city.invalid && (city.dirty || city.touched)" class="col">Veuillez remplir ce
+                    champ
+                </mdb-error>
+                <mdb-success *ngIf="city.valid && (city.dirty || city.touched)"></mdb-success>
+            </div>
+            <!--Code Postal-->
+            <div class="md-form col-4">
+                <input type="text" formControlName="contactFormZip" id="materialContactFormZip" class="form-control"
+                    mdbInput mdbValidate />
+                <label for="materialContactFormZip" class="col">Code Postal</label>
+                <mdb-error *ngIf="zip.invalid && (zip.dirty || zip.touched)" class="col">Code postal non valide
+                </mdb-error>
+                <mdb-success *ngIf="zip.valid && (zip.dirty || zip.touched)"></mdb-success>
+            </div>
+
+        </div>
+
+        <button mdbBtn color="info" outline="true" rounded="true" block="true" class="z-depth-0 my-4 waves-effect"
+            mdbWavesEffect type="submit(1)" [disabled]="disabledSubmitButton">
+            Send
+        </button>
+    </form>
+<!--RECAP  -->
+    <div class="ml-auto col-5  recap d-none d-lg-block formulaire">
+        <div class=" py-2 px-3">
+            <h3 class="text-white">Récapitulatif de votre demande :</h3>
+>>>>>>> Stashed changes
+            <hr>
+            <p class="text-white">{{currentControl.name}}</p>
+            <hr>
+            <p class="text-white">Tarif estimé : {{this.currentControl.price}} euros </p>
+        </div>
+    </div>
+</div>
+<!--RECAP MOBIIIILE  -->
+<div class="col-12 rounded recap d-lg-none formulaire">
+    <div class=" py-2 px-3 ">
+        <h3 class="text-white">Récapitulatif de votre demande :</h3>
+        <hr>
+        <p class="text-white">{{currentControl.name}}</p>
+        <hr>
+        <p class="text-white">Tarif estimé : {{this.currentControl.price}} euros </p>
     </div>
 </div>
