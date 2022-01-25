@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             <button *ngFor="let typeOfClient of typeOfControls; let i = index;" (click)="choseClient(i)" mdbBtn
-                type="button" outline="true" rounded="true" class="col-3 border"
+                type="button" outline="true" rounded="true" class="col-9 col-md-3 border"
                 [ngClass]="{'border-success': typeOfControls[i].active}"
                 mdbWavesEffect>{{typeOfControls[i].type}}</button>
         </div>
@@ -26,7 +26,7 @@
         </div>
         <div class="row" *ngIf="typeOfControls[0].active">
             <button *ngFor="let typeOfControl of typeOfControls[0].particulier; let i = index;"
-                (click)="choseControl(i); selectedOption = 'false'" mdbBtn type="button" class="col-3 border"
+                (click)="choseControl(i); selectedOption = 'false'" mdbBtn type="button" class="col-9 col-md-3 border"
                 [ngClass]="{'border-success': typeOfControl.active}" mdbWavesEffect>{{typeOfControl.control}}</button>
         </div>
 
@@ -41,7 +41,7 @@
         <div class="row mt-3"
             *ngIf="selectedOption == 'Réception – périodique - vente installation électrique avec ou sans schémas'">
             <button *ngFor="let typeBien of typeOfControls[0].particulier[4].typeBien; let i = index;"
-                (click)="chosePEB(i)" mdbBtn type="button" outline="true" class="col-3 border"
+                (click)="chosePEB(i)" mdbBtn type="button" outline="true" class="col-9 col-md-3 border"
                 [ngClass]="{'border-success': typeBien.active}" mdbWavesEffect>{{typeBien.bien}}</button>
         </div>
         <div class="row mt-3"
@@ -87,11 +87,11 @@
         </div>
         <div class="row" *ngIf="typeOfControls[0].particulier[4].active">
             <button *ngFor="let typeBien of typeOfControls[0].particulier[4].typeBien; let i = index;"
-                (click)="chosePEB(i)" mdbBtn type="button" outline="true" class="col-3 border"
+                (click)="chosePEB(i)" mdbBtn type="button" outline="true" class="col-9 col-md-3 border"
                 [ngClass]="{'border-success': typeBien.active}" mdbWavesEffect>{{typeBien.bien}}</button>
         </div>
         <div class="row" *ngIf="typeOfControls[0].particulier[4].active">
-            <div class="md-form col-3">
+            <div class="md-form col-9 col-md-3">
                 <input mdbInput type="text" class="form-control" id="nbrChambres" name="nbrChambres"
                     [(ngModel)]="nbrChambres">
                 <label for="nbrChambres" class="white-text">Nombre de chambres</label>
