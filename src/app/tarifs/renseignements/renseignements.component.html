@@ -15,7 +15,11 @@
 <!--Type de clients mobile-->
         <div class="row d-lg-none">
             <button *ngFor="let typeOfClient of typeOfControls; let i = index;" (click)="choseClient(i)" mdbBtn
+<<<<<<< HEAD
                 type="button" outline="true" rounded="true" class="col-8 border"
+=======
+                type="button" outline="true" rounded="true" class="col-3 border"
+>>>>>>> parent of 1cb3135 (tarifs responsive)
                 [ngClass]="{'border-success': typeOfControls[i].active}"
                 mdbWavesEffect>{{typeOfControls[i].type}}</button>
         </div>
@@ -34,6 +38,7 @@
         <div class="row" *ngIf="typeOfControls[0].active">
             <button *ngFor="let typeOfControl of typeOfControls[0].particulier; let i = index;"
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                 (click)="choseControl(i); selectedOption = 'false'" mdbBtn type="button" class="col-9 col-md-3 border"
 =======
@@ -45,6 +50,9 @@
             <button *ngFor="let typeOfControl of typeOfControls[0].particulier; let i = index;"
                 (click)="choseControl(i); selectedOption = 'false'" mdbBtn type="button" class="d-block d-lg-none col-10 border"
 >>>>>>> Stashed changes
+=======
+                (click)="choseControl(i); selectedOption = 'false'" mdbBtn type="button" class="col-3 border"
+>>>>>>> parent of 1cb3135 (tarifs responsive)
 =======
                 (click)="choseControl(i); selectedOption = 'false'" mdbBtn type="button" class="col-3 border"
 >>>>>>> parent of 1cb3135 (tarifs responsive)
@@ -62,6 +70,7 @@
         <div class="row mt-3 d-lg-none"
             *ngIf="selectedOption == 'Réception – périodique - vente installation électrique avec ou sans schémas'">
             <button *ngFor="let typeBien of typeOfControls[0].particulier[4].typeBien; let i = index;"
+<<<<<<< HEAD
                 (click)="chosePEB(i)" mdbBtn type="button" outline="true" class="col-6 border"
                 [ngClass]="{'border-success': typeBien.active}" mdbWavesEffect>{{typeBien.bien}}</button>
         </div>
@@ -69,6 +78,8 @@
         <div class="row mt-3 d-none d-lg-block"
             *ngIf="selectedOption == 'Réception – périodique - vente installation électrique avec ou sans schémas'">
             <button *ngFor="let typeBien of typeOfControls[0].particulier[4].typeBien; let i = index;"
+=======
+>>>>>>> parent of 1cb3135 (tarifs responsive)
                 (click)="chosePEB(i)" mdbBtn type="button" outline="true" class="col-3 border"
                 [ngClass]="{'border-success': typeBien.active}" mdbWavesEffect>{{typeBien.bien}}</button>
         </div>
@@ -117,6 +128,7 @@
         <div class="row" *ngIf="typeOfControls[0].particulier[4].active">
             <button *ngFor="let typeBien of typeOfControls[0].particulier[4].typeBien; let i = index;"
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                 (click)="chosePEB(i)" mdbBtn type="button" outline="true" class="col-9 col-md-3 border"
 =======
@@ -134,6 +146,9 @@
 =======
                 (click)="chosePEB(i)" mdbBtn type="button" outline="true" class="col-3 border"
 >>>>>>> parent of 1cb3135 (tarifs responsive)
+=======
+                (click)="chosePEB(i)" mdbBtn type="button" outline="true" class="col-3 border"
+>>>>>>> parent of 1cb3135 (tarifs responsive)
                 [ngClass]="{'border-success': typeBien.active}" mdbWavesEffect>{{typeBien.bien}}</button>
         </div>
         
@@ -147,11 +162,15 @@
 
         <div class="row" *ngIf="typeOfControls[0].particulier[4].active">
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             <div class="md-form col-9 col-md-3">
 =======
             <div class="md-form col-3 d-none d-lg-block">
 >>>>>>> Stashed changes
+=======
+            <div class="md-form col-3">
+>>>>>>> parent of 1cb3135 (tarifs responsive)
 =======
             <div class="md-form col-3">
 >>>>>>> parent of 1cb3135 (tarifs responsive)
