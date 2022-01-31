@@ -114,7 +114,7 @@ export class TarifsComponent implements OnInit {
         }
       ]
     },
-    { type: "professionel", active: false }
+    { type: "professionnel", active: false }
   ]
 
 

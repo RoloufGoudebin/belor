@@ -1,7 +1,7 @@
 <div class="row">
 
     <!--Formulaire-->
-    <form class="col-12 col-md-6 white rounded mb-5 order-2 order-md-1" [formGroup]="contactForm" (ngSubmit)="submit(1)">
+    <form class="col-12 formulaire col-md-6 mb-5 order-2 order-md-1" [formGroup]="contactForm" (ngSubmit)="submit(1)">
 
         <!--Nom et prénom -->
         <div class="row">
@@ -95,13 +95,13 @@
         </button>
     </form>
 
-    <div class="ml-md-auto col-md-5 col-12 rounded recap mb-5 mb-md-0 order-1 order-md-2">
-        <div class="white py-2 px-3 rounded">
+    <div class="ml-md-auto col-md-5 col-12  recap mb-5 mb-md-0 order-1 order-md-2">
+        <div class="white py-2 px-3 formulaire text-white">
             <h3>Récapitulatif de votre demande :</h3>
             <hr>
             <p>{{currentControl.name}}</p>
             <hr>
-            <p>Tarif estimé : {{this.currentControl.price}} euros </p>
+            <h2>Tarif estimé : {{this.currentControl.price}} euros </h2>
         </div>
     </div>
 </div>
