@@ -15,23 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(private databaseService: DatabaseService) { }
 
   ngOnInit(): void {
-    this.retrieveTutorials();
-    console.log(this.texts);
   }
 
-
-  retrieveTutorials(): void {
-    this.databaseService.getAll().snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c =>
-          ({ key: c.payload.key, ...c.payload.val() })
-        )
-      )
-    ).subscribe(data => {
-      this.texts = data[0];
-      console.log(this.texts[1]);
-    });
-    console.log(this.texts);
-  }
 
 }

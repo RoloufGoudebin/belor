@@ -95,13 +95,23 @@
         </button>
     </form>
 
-    <div class="ml-md-auto col-md-5 col-12  recap mb-5 mb-md-0 order-1 order-md-2">
+    <div *ngIf="currentControl.type=='particulier'" class="ml-md-auto col-md-5 col-12  recap mb-5 mb-md-0 order-1 order-md-2">
         <div class="white py-2 px-3 formulaire text-white">
             <h3>Récapitulatif de votre demande :</h3>
             <hr>
             <p>{{currentControl.name}}</p>
             <hr>
             <h2>Tarif estimé : {{this.currentControl.price}} euros </h2>
+        </div>
+    </div>
+
+    <div *ngIf="currentControl.type=='pro'" class="ml-md-auto col-md-5 col-12  recap mb-5 mb-md-0 order-1 order-md-2">
+        <div class="white py-2 px-3 formulaire text-white">
+            <h3>Récapitulatif de votre demande :</h3>
+            <hr>
+            <p>Contrôle pour un particulier </p>
+            <hr>
+            <h2>Nous ne pouvons vous donner de tarifs, remplissez le formulaire et nous vous recontacterons</h2>
         </div>
     </div>
 </div>

@@ -80,10 +80,13 @@ export class RenseignementsComponent implements OnInit {
   //submit pour les pros
   public submitPro(i: number) {
     this.onSubmit.emit(i);
+    this.currentControl.name = "Controle(s) pour pro"
+    this.currentControl.type = 'pro';
   }
 
   submit(i: number) {
     this.onSubmit.emit(i);
+    this.currentControl.type = 'particulier';
 
     // Controle électrique
     if (this.typeOfControls[0].particulier[0].active) {

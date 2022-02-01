@@ -1,6 +1,6 @@
-import { ConnectionService } from '../../connection.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit, HostListener, Input, EventEmitter, Output } from '@angular/core';
+import { MailService } from 'src/app/services/mail.service';
 
 
 @Component({
@@ -16,6 +16,7 @@ export class CoordonneesComponent implements OnInit {
   optionsSelect: Array<any>;
 
   @Input() currentControl;
+  @Input() 
   @Output() onSubmit = new EventEmitter<any>();
 
   @HostListener('input') oninput() {
@@ -25,7 +26,7 @@ export class CoordonneesComponent implements OnInit {
     }
   }
 
-  constructor(fb: FormBuilder, private connectionService: ConnectionService) {
+  constructor(fb: FormBuilder,  private mailService: MailService) {
 
     this.contactForm = fb.group({
       'contactFormFirstName': ['', Validators.required],
@@ -40,6 +41,7 @@ export class CoordonneesComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.currentControl);
   }
 
   get lastName() {
@@ -66,13 +68,14 @@ export class CoordonneesComponent implements OnInit {
 
   submit(i: number) {
     this.onSubmit.emit(i);
-    this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {
-      alert('Your message has been sent.');
-      this.contactForm.reset();
-      this.disabledSubmitButton = true;
-    }, (error: any) => {
-      console.log('Error', error);
-    });
+    let emailData = "<h1>"+ this.currentControl.name+"</h1>" + 
+    "<p> Nom : " + this.contactForm.get('contactFormLastName').value +"</p>" + 
+    "<p> Prénom : " + this.contactForm.get('contactFormFirstName').value +"</p>" + 
+    "<p> Email : " + this.contactForm.get('contactFormEmail').value +"</p>" + 
+    "<p> Numéro téléphone : " + this.contactForm.get('contactFormPhone').value +"</p>" + 
+    "<p> Rue : " + this.contactForm.get('contactFormStreet').value +"</p>" + 
+    "<p> Ville : " + this.contactForm.get('contactFormZip').value + " " + this.contactForm.get('contactFormCity').value + "</p>";
+    this.mailService.sendMail(emailData);
   }
 
 }

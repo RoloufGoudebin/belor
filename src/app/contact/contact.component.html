@@ -4,137 +4,152 @@
     <!-- Section heading -->
     <h1 class="h1-responsive font-weight-bold text-center text-white">Contactez-nous</h1>
     <!-- Section description -->
-    <h2 class="text-center w-responsive mx-auto mb-5">N'hésitez pas à nous poser vos questions, nous vous répondrons dans
+    <h2 class="text-center w-responsive mx-auto mb-5">N'hésitez pas à nous poser vos questions, nous vous répondrons
+      dans
       les plus brefs délais. Informations PEB, techniques, etc.</h2>
 
-  
+
 
     <!-- Section: Contact v.3 -->
-<section class="contact-section my-5">
+    <section class="contact-section my-5">
 
-  <!-- Form with header -->
-  <div class="card bg">
+      <!-- Form with header -->
+      <div class="card bg">
 
-    <!-- Grid row -->
-    <div class="row">
+        <!-- Grid row -->
+        <div class="row">
 
-      <!-- Grid column -->
-      <div class="col-lg-8">
+          <!-- Grid column -->
+          <div class="col-lg-8">
+            <form [formGroup]="contactForm">
+              
+              <div class="card-body form">
 
-        <div class="card-body form">
+                <!-- Header -->
+                <h3 class="mt-4 indigo-text">
+                  <mdb-icon far icon="envelope" class="pr-2 indigo-text"></mdb-icon>Ecrivez-nous
+                </h3>
 
-          <!-- Header -->
-          <h3 class="mt-4 indigo-text"><mdb-icon far icon="envelope" class="pr-2 indigo-text"></mdb-icon>Ecrivez-nous</h3>
+                <!-- Grid row -->
+                <div class="row">
 
-          <!-- Grid row -->
-          <div class="row">
+                  <!-- Grid column -->
+                  <div class="col-md-6">
+                    <div class="md-form mb-0">
+                      <input type="text" id="form-contact-name" class="form-control" formControlName="name" mdbInput>
+                      <label for="form-contact-name" class="">Nom</label>
+                    </div>
+                  </div>
+                  <!-- Grid column -->
 
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-name" class="form-control" mdbInput>
-                <label for="form-contact-name" class="">Nom</label>
+                  <!-- Grid column -->
+                  <div class="col-md-6">
+                    <div class="md-form mb-0">
+                      <input type="text" id="form-contact-email" class="form-control" formControlName="mail" mdbInput>
+                      <label for="form-contact-email" class="">Email</label>
+                    </div>
+                  </div>
+                  <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+                <!-- Grid row -->
+                <div class="row">
+
+                  <!-- Grid column -->
+                  <div class="col-md-6">
+                    <div class="md-form mb-0">
+                      <input type="text" id="form-contact-phone" class="form-control" formControlName="phone" mdbInput>
+                      <label for="form-contact-phone" class="">Téléphone</label>
+                    </div>
+                  </div>
+                  <!-- Grid column -->
+
+                  <!-- Grid column -->
+                  <div class="col-md-6">
+                    <div class="md-form mb-0">
+                      <input type="text" id="form-contact-company" class="form-control" formControlName="society"
+                        mdbInput>
+                      <label for="form-contact-company" class="">Société</label>
+                    </div>
+                  </div>
+                  <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+                <!-- Grid row -->
+                <div class="row">
+
+                  <!-- Grid column -->
+                  <div class="col-md-12">
+                    <div class="md-form mb-0">
+                      <textarea type="text" id="form-contact-message" class="form-control md-textarea"
+                        formControlName="message" rows="3" mdbInput></textarea>
+                      <label for="form-contact-message">Votre message</label>
+                      <a mdbBtn floating="true" size="lg" color="blue" mdbWavesEffect (click)="submit()">
+                        <mdb-icon far icon="paper-plane"></mdb-icon>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
               </div>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-email" class="form-control" mdbInput>
-                <label for="form-contact-email" class="">Email</label>
-              </div>
-            </div>
-            <!-- Grid column -->
+            </form>
 
           </div>
-          <!-- Grid row -->
+          <!-- Grid column -->
 
-          <!-- Grid row -->
-          <div class="row">
+          <!-- Grid column -->
+          <div class="col-lg-4">
 
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-phone" class="form-control" mdbInput>
-                <label for="form-contact-phone" class="">Téléphone</label>
-              </div>
-            </div>
-            <!-- Grid column -->
+            <div class="card-body bg contact text-center h-100 white-text">
 
-            <!-- Grid column -->
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-company" class="form-control" mdbInput>
-                <label for="form-contact-company" class="">Société</label>
-              </div>
-            </div>
-            <!-- Grid column -->
-
-          </div>
-          <!-- Grid row -->
-
-          <!-- Grid row -->
-          <div class="row">
-
-            <!-- Grid column -->
-            <div class="col-md-12">
-              <div class="md-form mb-0">
-                <textarea type="text" id="form-contact-message" class="form-control md-textarea" rows="3"
-                  mdbInput></textarea>
-                <label for="form-contact-message">Votre message</label>
-                <a mdbBtn floating="true" size="lg" color="blue" mdbWavesEffect>
-                  <mdb-icon far icon="paper-plane"></mdb-icon>
-                </a>
-              </div>
-            </div>
-            <!-- Grid column -->
-
-          </div>
-          <!-- Grid row -->
-
-        </div>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-lg-4">
-
-        <div class="card-body bg contact text-center h-100 white-text">
-
-          <h3 class="my-4 pb-2">Contact</h3>
-          <ul class="text-lg-left list-unstyled ml-4">
-            <li>
-              <p><mdb-icon fas icon="map-marked" class="pr-2"></mdb-icon> <li>1370 Jodoigne - Rue de Fonteny, 20</li>
+              <h3 class="my-4 pb-2">Contact</h3>
+              <ul class="text-lg-left list-unstyled ml-4">
+                <li>
+                  <p>
+                    <mdb-icon fas icon="map-marked" class="pr-2"></mdb-icon>
+                <li>1370 Jodoigne - Rue de Fonteny, 20</li>
                 <li>1330 Rixensart - Rue des bleuets, 6</li>
                 <li>1480 Saintes - Rue Julien Marsille, 170</li>
-                <li>1400 Nivelles - Chée de Charleroi, 2</li></p>
-            </li>
-            <li>
-              <p><mdb-icon fas icon="phone" class="pr-2"></mdb-icon><li>010/45.41.06</li>
-              <li>0470/990.212</li></p>
-              
-              </li>
-            <li>
-              <p><mdb-icon fas icon="envelope" class="pr-2"></mdb-icon><li>info@belor.be</li></p>
-            </li>
-          </ul>
-          
+                <li>1400 Nivelles - Chée de Charleroi, 2</li>
+                </p>
+                </li>
+                <li>
+                  <p>
+                    <mdb-icon fas icon="phone" class="pr-2"></mdb-icon>
+                <li>010/45.41.06</li>
+                <li>0470/990.212</li>
+                </p>
+
+                </li>
+                <li>
+                  <p>
+                    <mdb-icon fas icon="envelope" class="pr-2"></mdb-icon>
+                <li>info@belor.be</li>
+                </p>
+                </li>
+              </ul>
+
+
+            </div>
+
+          </div>
+          <!-- Grid column -->
 
         </div>
+        <!-- Grid row -->
 
       </div>
-      <!-- Grid column -->
+      <!-- Form with header -->
 
-    </div>
-    <!-- Grid row -->
-
-  </div>
-  <!-- Form with header -->
-
-</section>
-<!-- Section: Contact v.3 -->
+    </section>
+    <!-- Section: Contact v.3 -->
     <!-- Grid row -->
   </div>
 

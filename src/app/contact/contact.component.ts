@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { MailService } from '../services/mail.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  contactForm = new FormGroup({
+    name: new FormControl(''),
+    mail: new FormControl(''),
+    phone: new FormControl(''),
+    society: new FormControl(''),
+    message: new FormControl('')
+  });
+
+  constructor(private mail: MailService) { }
 
   ngOnInit(): void {
   }
 
+  submit(){
+    let mailData;
+    mailData = "<p>Nom : " + this.contactForm.value.name + "</p> " +
+    "<p>Mail : " + this.contactForm.value.mail + "</p> " +
+    "<p>Téléphone : " + this.contactForm.value.phone + "</p> " +
+    "<p>Société : " + this.contactForm.value.society + "</p> " +
+    "<p>Message : " + this.contactForm.value.message + "</p> " +
+    console.log(mailData);
+    this.mail.sendMail(mailData);
+  }
 }

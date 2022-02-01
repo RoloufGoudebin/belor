@@ -26,7 +26,6 @@ import { RenseignementsComponent } from './tarifs/renseignements/renseignements.
 import { CoordonneesComponent } from './tarifs/coordonnees/coordonnees.component';
 import { DisponibilitesComponent } from './tarifs/disponibilites/disponibilites.component';
 
-import { ConnectionService } from './connection.service';
 import { ControlesComponent } from './activites/controles/controles.component';
 import { ConsultanceComponent } from './activites/consultance/consultance.component';
 import { CoordinationComponent } from './activites/coordination/coordination.component';
@@ -70,7 +69,7 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
-  providers: [ConnectionService],
+  providers: [],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -14,6 +14,7 @@ export class TarifsComponent implements OnInit {
   ]
 
   currentControl = {
+    type: String,
     name: String,
     nbrChambres: Number,
     surface: Number,
