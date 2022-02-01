@@ -16,7 +16,7 @@ export class CoordonneesComponent implements OnInit {
   optionsSelect: Array<any>;
 
   @Input() currentControl;
-  @Input() 
+  @Input()
   @Output() onSubmit = new EventEmitter<any>();
 
   @HostListener('input') oninput() {
@@ -26,7 +26,7 @@ export class CoordonneesComponent implements OnInit {
     }
   }
 
-  constructor(fb: FormBuilder,  private mailService: MailService) {
+  constructor(fb: FormBuilder, private mailService: MailService) {
 
     this.contactForm = fb.group({
       'contactFormFirstName': ['', Validators.required],
@@ -53,29 +53,31 @@ export class CoordonneesComponent implements OnInit {
   get email() {
     return this.contactForm.get('contactFormEmail');
   }
-  get phone(){
+  get phone() {
     return this.contactForm.get('contactFormPhone');
   }
-  get street(){
+  get street() {
     return this.contactForm.get('contactFormStreet');
   }
-  get city(){
+  get city() {
     return this.contactForm.get('contactFormCity');
   }
-  get zip(){
+  get zip() {
     return this.contactForm.get('contactFormZip');
   }
 
   submit(i: number) {
     this.onSubmit.emit(i);
-    let emailData = "<h1>"+ this.currentControl.name+"</h1>" + 
-    "<p> Nom : " + this.contactForm.get('contactFormLastName').value +"</p>" + 
-    "<p> Prénom : " + this.contactForm.get('contactFormFirstName').value +"</p>" + 
-    "<p> Email : " + this.contactForm.get('contactFormEmail').value +"</p>" + 
-    "<p> Numéro téléphone : " + this.contactForm.get('contactFormPhone').value +"</p>" + 
-    "<p> Rue : " + this.contactForm.get('contactFormStreet').value +"</p>" + 
-    "<p> Ville : " + this.contactForm.get('contactFormZip').value + " " + this.contactForm.get('contactFormCity').value + "</p>";
-    this.mailService.sendMail(emailData);
+    let user = {
+      message: "<h1>" + this.currentControl.name + "</h1>" +
+        "<p> Nom : " + this.contactForm.get('contactFormLastName').value + "</p>" +
+        "<p> Prénom : " + this.contactForm.get('contactFormFirstName').value + "</p>" +
+        "<p> Email : " + this.contactForm.get('contactFormEmail').value + "</p>" +
+        "<p> Numéro téléphone : " + this.contactForm.get('contactFormPhone').value + "</p>" +
+        "<p> Rue : " + this.contactForm.get('contactFormStreet').value + "</p>" +
+        "<p> Ville : " + this.contactForm.get('contactFormZip').value + " " + this.contactForm.get('contactFormCity').value + "</p>"
+    }
+    this.mailService.sendMail(user);
   }
 
 }
