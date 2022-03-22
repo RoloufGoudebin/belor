@@ -9,8 +9,8 @@ const app = express();
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 
-app.listen(3000, () => {
-  console.log("The server started on port 3000 !!!!!!");
+app.listen(3500, () => {
+  console.log("The server started on port 3500 !!!!!!");
 });
 
 app.get("/", (req, res) => {
