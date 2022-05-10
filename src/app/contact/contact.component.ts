@@ -24,12 +24,15 @@ export class ContactComponent implements OnInit {
 
   submit() {
     let user = {
+      subject : "Contact site",
+      from : this.contactForm.value.mail,
       message: "<p>Nom : " + this.contactForm.value.name + "</p> " +
-        "<p>Mail : " + this.contactForm.value.mail + "</p> " +
-        "<p>Téléphone : " + this.contactForm.value.phone + "</p> " +
-        "<p>Société : " + this.contactForm.value.society + "</p> " +
-        "<p>Message : " + this.contactForm.value.message + "</p> "
+      "<p>Mail : " + this.contactForm.value.mail + "</p> " +
+      "<p>Téléphone : " + this.contactForm.value.phone + "</p> " +
+      "<p>Société : " + this.contactForm.value.society + "</p> " +
+      "<p>Message : " + this.contactForm.value.message + "</p> "
     }
+    this.contactForm.reset();
     this.mail.sendMail(user)
   }
 }
